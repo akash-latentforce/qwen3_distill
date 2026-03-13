@@ -1,0 +1,9 @@
+.env
+__pycache__/
+*.pyc
+checkpoints/
+qwen3_lora_dep/
+finetuned_qwen3_dep/
+repos/
+results/**/qwen_*_results.json
+*.egg-info/

@@ -1,0 +1,23 @@
+# Requirements for 02_finetune_unsloth.ipynb
+# Run: pip install -r requirements-train.txt
+#
+# NOTE: On Colab, use the install cell in the notebook instead (handles xformers version).
+# This file is for local/cloud installs with a proper CUDA setup.
+
+# Unsloth (installs torch, transformers, peft, trl, bitsandbytes, etc.)
+unsloth
+
+# Pin these to match Unsloth's tested versions (from Qwen3 notebook)
+transformers==4.56.2
+trl==0.22.2
+
+# Also needed by eval (shared lib)
+openai>=1.0.0
+pyyaml>=6.0
+numpy
+
+# Dataset loading
+datasets>=4.3.0
+huggingface_hub>=0.34.0
+sentencepiece
+protobuf

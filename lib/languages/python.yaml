@@ -1,0 +1,197 @@
+# Python Language Configuration
+# Used by the Unified Dependency Analyzer
+
+name: "Python"
+resolver: "python"
+
+extensions:
+  - .py
+  - .pyw
+
+skip_dirs:
+  - __pycache__
+  - .git
+  - .venv
+  - venv
+  - env
+  - .env
+  - node_modules
+  - .tox
+  - .nox
+  - .pytest_cache
+  - .mypy_cache
+  - .ruff_cache
+  - dist
+  - build
+  - egg-info
+  - .eggs
+  - site-packages
+
+skip_patterns:
+  - "*.pyc"
+  - "*.pyo"
+  - "*_pb2.py"
+  - "*_pb2_grpc.py"
+  - "setup.py"
+  - "conftest.py"
+
+cache_filename: "py_extraction_data.json"
+
+default_result:
+  imports: []
+  definitions: []
+  references: []
+
+prompt: |
+  Analyze this Python file and extract import/export information.
+
+  TASK: Extract the following:
+
+  1. IMPORTS: All imports from OTHER PROJECT files (internal dependencies).
+     
+     For each import, extract:
+     - "module": The module path being imported from
+     - "names": List of names being imported (use ["*"] for star imports, ["__module__"] for plain imports)
+     
+     INCLUDE these patterns:
+     - from myapp.models import User, Role  →  {"module": "myapp.models", "names": ["User", "Role"]}
+     - from .utils import helper  →  {"module": ".utils", "names": ["helper"]}
+     - from ..core.base import Base  →  {"module": "..core.base", "names": ["Base"]}
+     - from . import constants  →  {"module": ".", "names": ["constants"]}
+     - import myapp.services.auth  →  {"module": "myapp.services.auth", "names": []}
+     - import myapp.services.auth as auth  →  {"module": "myapp.services.auth", "names": []}
+     - from myapp.utils import *  →  {"module": "myapp.utils", "names": ["*"]}
+     - from myapp.utils import helper as h  →  {"module": "myapp.utils", "names": ["helper"]}  (original name, not alias)
+     
+     EXCLUDE (external/stdlib - do NOT include):
+     - import os, sys, re, json, pathlib, typing, collections, etc. (stdlib)
+     - import numpy, pandas, requests, flask, django, etc. (external packages)
+     - from typing import List, Dict, Optional, etc.
+     - from collections import defaultdict, etc.
+     - from dataclasses import dataclass, etc.
+     - from abc import ABC, abstractmethod, etc.
+     - from enum import Enum, etc.
+     - from functools import wraps, etc.
+     
+     HOW TO IDENTIFY INTERNAL IMPORTS:
+     - Relative imports (starting with . or ..) are ALWAYS internal
+     - Imports matching the project's package structure are internal
+     - Look at the file path to understand the project structure
+     - When in doubt about top-level imports, include them (we'll filter later)
+
+  2. DEFINITIONS: All classes, functions, and important variables DEFINED in this file.
+     
+     INCLUDE:
+     - class MyClass:  →  "MyClass"
+     - class ChildClass(Base) → "ChildClass"
+     - def my_function():  →  "my_function"
+     - async def async_handler():  →  "async_handler"
+     - MY_CONSTANT = "value"  →  "MY_CONSTANT" (only UPPER_CASE constants)
+     - Type aliases: MyType = List[str]  →  "MyType"
+     
+     EXCLUDE:
+     - Dunder methods: __init__, __str__, etc.
+     - Local variables inside functions
+     - Import aliases
+
+  3. REFERENCES: When an entire module is imported (e.g., `import myapp` or `import myapp.models`),
+     track what attributes/names are accessed on that module in the code.
+
+     For each such module import, list the FIRST attribute accessed after the module path.
+     Use the ORIGINAL module name (not the alias).
+
+     Format: {"module": "<original_module_path>", "names": ["<attr1>", "<attr2>"]}
+
+     EXAMPLES:
+
+        import myapp
+        import myapp.services as svc
+        import myapp.db
+
+        myapp.init()              →  {"module": "myapp", "names": [..., "init"]}
+        myapp.config              →  {"module": "myapp", "names": [..., "config"]}
+        svc.auth.login()          →  {"module": "myapp.services", "names": [..., "auth"]}
+        myapp.db.connect()        →  {"module": "myapp.db", "names": [..., "connect"]}
+        x = myapp.DEFAULT_TIMEOUT →  {"module": "myapp", "names": [..., "DEFAULT_TIMEOUT"]}
+
+     Combine all references for the same module into ONE entry:
+        myapp.init()
+        myapp.config
+        →  {"module": "myapp", "names": ["init", "config"]}
+
+     ONLY track references from module-level imports:
+     - import X / import X as Y / import X.Y / import X.Y as Z
+     Do NOT track references from "from X import Y" style imports (those are already in the imports section).
+
+   Return ONLY valid JSON, no markdown, no explanation:
+   {
+      "imports": [
+         {"module": ".utils", "names": ["helper", "format_date"]},
+         {"module": "..models.user", "names": ["User"]},
+         {"module": "myapp.core", "names": ["BaseClass"]}
+      ],
+      "definitions": ["MyClass", "process_data", "DEFAULT_TIMEOUT"],
+      "references": [
+         {"module": "myapp", "names": ["init", "config"]},
+         {"module": "myapp.db", "names": ["connect"]}
+      ]
+   }
+
+  If nothing found, use empty arrays.
+  
+  IMPORTANT:
+  ------------------------------------
+  1. MODULE IMPORTS: Always use names: [] (empty array)
+     - import myapp                    →  {"module": "myapp", "names": []}
+     - import myapp as m               →  {"module": "myapp", "names": []}
+     - import myapp.utils              →  {"module": "myapp.utils", "names": []}
+     - import myapp.utils as utils     →  {"module": "myapp.utils", "names": []}
+
+  2. SYMBOL IMPORTS WITH ALIAS - DEPENDS ON FILE TYPE:
+
+     A) In __init__.py files (re-exports): Use the ALIAS (what's exported)
+        - from .logging import setup as setup_logging  →  {"module": ".logging", "names": ["setup_logging"]}
+        - from .core import Base as BaseClass          →  {"module": ".core", "names": ["BaseClass"]}
+        Why: The alias is what consumers will import from this package.
+
+     B) In regular files (consumers): Use the ORIGINAL name (what to look up)
+        - from myapp import CoreClass as CC    →  {"module": "myapp", "names": ["CoreClass"]}
+        - from mylib import User as U          →  {"module": "mylib", "names": ["User"]}
+        Why: The original name is what exists in the module's exports.
+
+     C) No alias: Use the name as-is
+        - from myapp import User               →  {"module": "myapp", "names": ["User"]}
+        - from .utils import helper            →  {"module": ".utils", "names": ["helper"]}
+
+  3. Don't mix module path and names:
+     - from myapp.utils import helper  →  CORRECT: {"module": "myapp.utils", "names": ["helper"]}
+     - WRONG: {"module": "myapp.utils.helper", "names": []}
+
+  4.If an alias is used (`import myapp as m`), track `m.foo` as a reference to "foo" on "myapp".
+
+
+  EXAMPLES FOR __init__.py (re-export files):
+  -------------------------------------------
+  from .models import User             →  {"module": ".models", "names": ["User"]}
+  from .logging import setup as log    →  {"module": ".logging", "names": ["log"]}
+  from .core import *                  →  {"module": ".core", "names": ["*"]}
+
+  EXAMPLES FOR REGULAR FILES (consumers):
+  ---------------------------------------
+  from mylib import CoreClass as CC    →  {"module": "mylib", "names": ["CoreClass"]}
+  from myapp.db import Session as S    →  {"module": "myapp.db", "names": ["Session"]}
+  from ..utils import helper as h      →  {"module": "..utils", "names": ["helper"]}
+  import myapp.config                  →  {"module": "myapp.config", "names": []}
+  import myapp.config as cfg           →  {"module": "myapp.config", "names": []}
+  from typing import List              →  DO NOT INCLUDE (stdlib)
+  import pandas as pd                  →  DO NOT INCLUDE (external)
+
+  class UserService:                   →  definitions: ["UserService"]
+  def get_user(id):                    →  definitions: ["get_user"]
+  MAX_RETRIES = 3                      →  definitions: ["MAX_RETRIES"]
+
+  File: FILEPATH_PLACEHOLDER
+
+  ```python
+  CONTENT_PLACEHOLDER
+  ```

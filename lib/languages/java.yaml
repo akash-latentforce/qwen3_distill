@@ -1,0 +1,122 @@
+# Java Language Configuration
+# Used by the Unified Dependency Analyzer
+
+name: "Java"
+resolver: "java"
+
+extensions:
+  - .java
+
+skip_dirs:
+  - build
+  - target
+  - .gradle
+  - .git
+  - .idea
+  - .mvn
+  - node_modules
+  - out
+  - bin
+  - .settings
+  - .classpath
+
+skip_patterns:
+  - "*.generated.java"
+  - "package-info.java"
+  - "module-info.java"
+
+cache_filename: "java_symbol_table.json"
+
+default_result:
+  package: ""
+  definitions: []
+  imports: []
+  used_classes: []
+  static_imports: []
+
+prompt: |
+  Analyze this Java file and extract dependency information.
+
+  TASK: Extract the following:
+
+  1. PACKAGE: What package is declared in this file?
+     Look for: package com.example.myapp.services;
+
+  2. DEFINITIONS: What classes, interfaces, enums, records, annotations are DEFINED in this file?
+     Look for: public class X, public interface IX, public enum X, public record X, @interface X
+     Include all access modifiers (public, protected, private, package-private).
+     Include inner/nested classes as separate entries (e.g. "OuterClass", "InnerClass").
+
+  3. IMPORTS: What packages/classes are imported?
+     Look for:
+     - import com.example.myapp.models.User; → Capture: "com.example.myapp.models.User"
+     - import com.example.myapp.models.*; → Capture: "com.example.myapp.models.*"
+
+     IGNORE:
+     - java.* (java.util, java.io, java.lang, java.time, etc.)
+     - javax.* (javax.servlet, javax.persistence, etc.)
+     - jakarta.* (jakarta.persistence, jakarta.servlet, etc.)
+     - org.springframework.* 
+     - org.junit.*, org.mockito.*, org.hamcrest.*
+     - org.slf4j.*, org.apache.*, org.hibernate.*
+     - com.google.common.*, com.fasterxml.*, io.swagger.*
+     - lombok.*
+     - Any other obvious third-party/framework imports
+
+  4. USED_CLASSES: What class/interface/type names are USED but NOT defined in this file?
+     Look for:
+     - Variable declarations: User user, Logger logger
+     - New instances: new UserService()
+     - Inheritance/implementation: class X extends BaseClass implements Serializable
+     - Generic parameters: List<User>, Map<String, Role>
+     - Method parameters: void save(User user)
+     - Return types: public User getUser()
+     - Annotations that are project-defined: @Transactional (skip), @MyCustomAnnotation (capture)
+     - **FULLY-QUALIFIED TYPE REFERENCES**: Class.forName("com.example.User")
+       Example: Class.forName("com.myapp.services.UserService") → Capture: "com.myapp.services.UserService"
+       **IMPORTANT**: When you find a fully-qualified name (contains dots), capture the ENTIRE name including package
+
+     IGNORE:
+     - Primitive types: int, long, boolean, double, float, char, byte, short, void
+     - Boxed primitives: Integer, Long, Boolean, Double, Float, Character, Byte, Short
+     - Common JDK types: String, Object, List, Map, Set, Collection, Optional, Stream, 
+       ArrayList, HashMap, HashSet, Arrays, Collections, Exception, RuntimeException,
+       Comparable, Iterable, Iterator, Class, Enum, Record, Throwable, StringBuilder
+     - Common framework annotations: @Override, @Deprecated, @SuppressWarnings,
+       @Autowired, @Inject, @Component, @Service, @Repository, @Controller,
+       @RestController, @RequestMapping, @GetMapping, @PostMapping, @PathVariable,
+       @RequestBody, @ResponseBody, @Bean, @Configuration, @Value, @Transactional,
+       @Entity, @Table, @Column, @Id, @GeneratedValue, @ManyToOne, @OneToMany,
+       @Test, @BeforeEach, @AfterEach, @Getter, @Setter, @Data, @Builder,
+       @NoArgsConstructor, @AllArgsConstructor, @Slf4j, @Log4j2
+     - Types defined IN THIS FILE (those go in definitions)
+
+  5. STATIC_IMPORTS: What static imports are used?
+     Look for:
+     - import static com.example.myapp.Constants.MAX_SIZE; → Capture: "com.example.myapp.Constants"
+     - import static com.example.myapp.Utils.*; → Capture: "com.example.myapp.Utils"
+     
+     Extract the fully-qualified CLASS name (strip the member/wildcard).
+     
+     IGNORE:
+     - import static java.*, javax.*, jakarta.*
+     - import static org.junit.*, org.mockito.*, org.hamcrest.*
+     - import static org.springframework.*
+
+  Return ONLY valid JSON, no markdown, no explanation:
+  {
+    "package": "com.example.myapp.services",
+    "definitions": ["AuthService", "AuthResult"],
+    "imports": ["com.example.myapp.models.User", "com.example.myapp.repositories.*"],
+    "used_classes": ["User", "Role", "IUserRepository"],
+    "static_imports": ["com.example.myapp.constants.AppConstants"]
+  }
+
+  If no package found, use empty string.
+  If nothing found for a field, use empty array.
+
+  File: FILEPATH_PLACEHOLDER
+
+  ```java
+  CONTENT_PLACEHOLDER
+  ```

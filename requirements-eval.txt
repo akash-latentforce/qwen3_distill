@@ -1,0 +1,5 @@
+# Requirements for 01_eval_base_models.ipynb
+# Run: pip install -r requirements-eval.txt
+openai>=1.0.0
+pyyaml>=6.0
+numpy

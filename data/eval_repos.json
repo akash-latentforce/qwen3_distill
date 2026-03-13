@@ -1,0 +1,32 @@
+[
+  {
+    "name": "garnet",
+    "url": "https://github.com/microsoft/garnet",
+    "language": "csharp",
+    "description": "Microsoft Garnet - C# cache store"
+  },
+  {
+    "name": "anime",
+    "url": "https://github.com/juliangarnier/anime",
+    "language": "javascript",
+    "description": "Anime.js - JavaScript animation library"
+  },
+  {
+    "name": "llama.cpp",
+    "url": "https://github.com/ggml-org/llama.cpp",
+    "language": "cpp",
+    "description": "llama.cpp - C++ LLM inference"
+  },
+  {
+    "name": "langchain4j",
+    "url": "https://github.com/langchain4j/langchain4j",
+    "language": "java",
+    "description": "LangChain for Java"
+  },
+  {
+    "name": "checkmate",
+    "url": "https://github.com/quantifiedcode/checkmate",
+    "language": "python",
+    "description": "Checkmate - Python static analysis tool"
+  }
+]

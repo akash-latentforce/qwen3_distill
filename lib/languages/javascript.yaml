@@ -1,0 +1,90 @@
+# JavaScript/TypeScript Language Configuration
+# Used by the Unified Dependency Analyzer
+
+name: "JavaScript/TypeScript"
+resolver: "javascript"
+
+extensions:
+  - .js
+  - .jsx
+  - .ts
+  - .tsx
+  - .mjs
+  - .cjs
+
+skip_dirs:
+  - node_modules
+  - dist
+  - build
+  - .git
+  - .next
+  - coverage
+  - __pycache__
+  - .turbo
+  - out
+
+skip_patterns:
+  - "*.min.js"
+  - "*.bundle.js"
+  - "*.min.mjs"
+
+cache_filename: "js_extraction_data.json"
+
+default_result:
+  definitions: []
+  references: []
+
+prompt: |
+  Analyze this JavaScript/TypeScript file and extract symbols.
+
+  DEFINITIONS: All EXPORTED symbols that other files could import.
+  - For named exports: use the exported name (e.g., "export const Foo" → "Foo")
+  - For default exports: use the NAME of what is being exported, NOT the word "default"
+    - "export default MyComponent" → "MyComponent"
+    - "export default function handler()" → "handler"
+    - "const Foo = () => {}; export default Foo" → "Foo"
+    - "export default class MyClass" → "MyClass"
+  - Exclude: internal/private functions that are NOT exported
+
+  REFERENCES: All IMPORTS from other PROJECT files (internal dependencies).
+  - Include: named imports, default imports, namespace imports
+  - For each import, capture BOTH the symbol name AND the source path
+  - EXCLUDE: imports from node_modules (external packages like 'react', 'lodash', '@mui/material', etc.)
+  - Only include imports from relative paths (./ ../) or project aliases (@/, ~/, etc.)
+
+  Return ONLY valid JSON, no markdown, no explanation:
+  {
+    "definitions": ["ExportedName1", "ExportedName2"],
+    "references": [
+      {"name": "importedName1", "source": "./path/to/file"},
+      {"name": "importedName2", "source": "@/Components/Something"}
+    ]
+  }
+
+  IMPORTANT: Never use "default" as a definition name. Always use the actual variable/function/class name.
+
+  Examples of CORRECT definitions:
+  - export function MyFunc() {}  →  definitions: ["MyFunc"]
+  - export const VALUE = 1  →  definitions: ["VALUE"]
+  - const Settings = () => {}; export default Settings  →  definitions: ["Settings"]
+  - export default function handler() {}  →  definitions: ["handler"]
+  - export default UserProfile  →  definitions: ["UserProfile"]
+
+  Examples of WRONG definitions:
+  - export default Settings  →  definitions: ["default"]  ← WRONG! Should be ["Settings"]
+
+  Examples of what to INCLUDE in references:
+  - import { foo } from "./utils"  →  {"name": "foo", "source": "./utils"}
+  - import Bar from "../components/Bar"  →  {"name": "Bar", "source": "../components/Bar"}
+  - import * as utils from "./utils"  →  {"name": "*", "source": "./utils"}
+
+  Examples of what to EXCLUDE from references (external packages):
+  - import React from "react"
+  - import { Box } from "@mui/material"
+
+  File: FILEPATH_PLACEHOLDER
+
+  Content:
+  ```
+  CONTENT_PLACEHOLDER
+  ```

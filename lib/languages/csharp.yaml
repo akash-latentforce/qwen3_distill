@@ -1,0 +1,101 @@
+# C# Language Configuration
+# Used by the Unified Dependency Analyzer
+
+name: "C#"
+resolver: "csharp"
+
+extensions:
+  - .cs
+
+skip_dirs:
+  - bin
+  - obj
+  - .git
+  - packages
+  - node_modules
+  - .vs
+  - TestResults
+  - Debug
+  - Release
+
+skip_patterns:
+  - "*.designer.cs"
+  - "*.generated.cs"
+  - "*.g.cs"
+  - "*.g.i.cs"
+
+cache_filename: "cs_symbol_table.json"
+
+default_result:
+  namespace: ""
+  definitions: []
+  usings: []
+  used_classes: []
+  global_usings: []
+
+prompt: |
+  Analyze this C# file and extract dependency information.
+
+  TASK: Extract the following:
+
+  1. NAMESPACE: What namespace is declared in this file?
+     Look for: namespace X.Y.Z
+
+  2. DEFINITIONS: What classes, interfaces, enums, structs are DEFINED in this file?
+     Look for: public class X, public interface IX, public enum X, public struct X
+     Include internal, private, protected too.
+
+  3. USINGS: What namespaces are imported?
+     Look for: 
+     - using X.Y.Z;
+     - using static X.Y.Z.ClassName;
+        → Capture ONLY the namespace: "X.Y.Z" (strip the class name)
+        Example: using static CompanyA.ModuleB.HelperD; -> Capture: "CompanyA.ModuleB"
+     - using Alias = X.Y.Z; -> Capture: "X.Y.Z"
+
+     IGNORE:
+     - System, System.* (System.Collections, System.Linq, System.IO, etc.)
+     - Microsoft.* (Microsoft.Extensions, Microsoft.AspNetCore, etc.)
+     - Anything that looks like external/framework namespace
+
+  4. USED_CLASSES: What class/interface/type names are USED but NOT defined in this file?
+     Look for:
+     - Variable declarations: User user, ILogger logger
+     - New instances: new UserService()
+     - Inheritance: class X : BaseClass, IInterface
+     - Generic parameters: List<User>, Dictionary<string, Role>
+     - Method parameters: void Save(User user)
+     - Return types: public User GetUser()
+     - **FULLY-QUALIFIED TYPE REFERENCES**: Type.GetType("Namespace.ClassName")
+       Example: Type.GetType("HumanResources.Person") → Capture: "HumanResources.Person"
+       Example: typeof(MyApp.Services.UserService) → Capture: "MyApp.Services.UserService"
+       **IMPORTANT**: When you find a fully-qualified name (contains dots), capture the ENTIRE name including namespace
+            
+     IGNORE:
+     - Primitive types: int, string, bool, double, float, decimal, object, void
+     - Common framework types: List, Dictionary, Task, Action, Func, IEnumerable, etc.
+     - Types defined IN THIS FILE (those go in definitions)
+
+  5. GLOBAL_USINGS: What namespaces are imported with GLOBAL using statements?
+     Look for:
+     - global using X.Y.Z; → Capture: "X.Y.Z"
+     - global using static X.Y.Z.ClassName; → Capture: "X.Y.Z"
+     Include ALL global usings (even System.* and Microsoft.*)
+    
+  Return ONLY valid JSON, no markdown, no explanation:
+  {
+    "namespace": "MyApp.Services",
+    "definitions": ["AuthService", "AuthResult"],
+    "usings": ["MyApp.Models", "MyApp.Repositories"],
+    "used_classes": ["User", "Role", "IUserRepository"],
+    "global_usings": ["MyApp.Common"]
+  }
+
+  If no namespace found, use empty string.
+  If nothing found for a field, use empty array.
+
+  File: FILEPATH_PLACEHOLDER
+
+  ```csharp
+  CONTENT_PLACEHOLDER
+  ```

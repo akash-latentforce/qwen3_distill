@@ -1,0 +1,115 @@
+# C++ Language Configuration
+# Used by the Unified Dependency Analyzer
+
+name: "C++"
+resolver: "cpp"
+
+extensions:
+  - .h
+  - .hpp
+  - .hxx
+  - .hh
+  - .H
+  - .cpp
+  - .cc
+  - .cxx
+  - .c
+  - .C
+
+skip_dirs:
+  - build
+  - out
+  - .git
+  - node_modules
+  - third_party
+  - external
+  - vendor
+  - deps
+  - dependencies
+  - cmake-build-debug
+  - cmake-build-release
+
+skip_patterns: []
+
+cache_filename: "cpp_include_data.json"
+
+default_result:
+  local_includes: []
+  system_includes: []
+  forward_declarations: []
+
+prompt: |
+  Analyze this C++ file and extract #include statements.
+
+  TASK: Extract all #include statements, forward declarations and categorize them.
+
+  1. LOCAL INCLUDES: #include "..." (with quotes)
+     These are project files. Extract the path exactly as written.
+     Example:
+     - #include "models.h" -> "models.h"
+     - #include "../calc.h" -> "../calc.h"
+     
+  2. SYSTEM INCLUDES: #include <...> (with angle brackets)
+     These are system/library headers. Just note them but we won't track them.
+     Example:
+     - #include <iostream> -> "iostream"
+     - #include <vector> -> "vector"
+     - #include <cmath> -> "cmath"
+
+  3. FORWARD DECLARATIONS: class X; or struct X; (without #include)
+     These are weak dependencies.
+     Examples:
+     - class Engine;
+       class Car { Engine* e; };
+       -> Engine is a forward declaration.
+     - enum Engine; -> Engine
+     - enum class color; -> color
+     - struct Engine; -> Engine
+     - template <typename T>
+       class TypedArray; -> TypedArray
+     - template <typename K, typename V>
+       class TypedDictionary; -> TypedDictionary
+     
+     Wrong Forward declarations Examples:
+     - #include "Engine.h"
+          class Car {
+              Engine engine;
+          };
+       -> Engine is not a forward declaration
+     - struct name {}; -> This is not a forward declaration.
+     - struct name { const int* p }; -> This is not a forward declaration.
+
+  Return ONLY valid JSON, no markdown, no explanation:
+  {
+    "local_includes": ["User.h", "models/Order.h", "../utils/Helper.h"],
+    "system_includes": ["iostream", "string", "vector", "cmath"],
+    "forward_declarations": ["SomeClass", "AnotherClass"]
+  }
+
+  If none found, use empty arrays.
+
+  EXAMPLES:
+  ---------
+  #include "User.h"           → local_includes: ["User.h"]
+  #include "models/Order.h"   → local_includes: ["models/Order.h"]
+  #include "../utils/Helper.h" → local_includes: ["../utils/Helper.h"]
+  #include <iostream>         → system_includes: ["iostream"]
+  #include <boost/json.hpp>   → system_includes: ["boost/json.hpp"]
+  #include <cmath>            → system_includes: ["cmath"]
+  class ForwardDeclared;      → forward_declarations: ["ForwardDeclared"]
+  struct Color;               → forward_declarations: ["Color"]
+  struct Color{};             → forward_declarations: []
+
+  IMPORTANT:
+  1. Don't misclassify the local_includes and system_includes.
+      - #include "Hello.h" -> system_includes: ["Hello.h"] -> This is wrong.
+      - #include <cmath> -> local_includes: ["cmath"] -> This is wrong.
+      - #include "cmap.h" -> local_includes: ["cmap.h"] -> This is correct.
+  2. Don't include which are not in file.
+  3. Forward declarations will be outside of functions, classes.
+
+  File: FILEPATH_PLACEHOLDER
+
+  ```cpp
+  CONTENT_PLACEHOLDER
+  ```
