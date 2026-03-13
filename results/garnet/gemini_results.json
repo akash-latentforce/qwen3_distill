@@ -1,0 +1,952 @@
+{
+  "libs/common/Networking/INetworkHandler.cs": {
+    "namespace": "Garnet.networking",
+    "definitions": [
+      "INetworkHandler"
+    ],
+    "usings": [],
+    "used_classes": [
+      "IDisposable",
+      "IMessageConsumer"
+    ],
+    "global_usings": []
+  },
+  "benchmark/Resp.benchmark/ClientTypes.cs": {
+    "namespace": "Resp.benchmark",
+    "definitions": [
+      "ClientType"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/benchmark/YCSB.benchmark/TestLoader.cs": {
+    "namespace": "Tsavorite.benchmark",
+    "definitions": [
+      "IKeySetter",
+      "TestLoader"
+    ],
+    "usings": [
+      "CommandLine",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "Options",
+      "Key",
+      "KeySpanByte",
+      "BenchmarkType",
+      "ParserResult",
+      "Parser",
+      "ParserResultType",
+      "YcsbConstants",
+      "Native32",
+      "Tsavorite_YcsbBenchmark",
+      "SpanByteYcsbBenchmark",
+      "ConcurrentDictionary_YcsbBenchmark",
+      "RandomGenerator",
+      "ZipfGenerator"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Storage/Functions/MainStore/VectorSessionFunctions.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "VectorSessionFunctions"
+    ],
+    "usings": [
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "ISessionFunctions",
+      "SpanByte",
+      "VectorInput",
+      "FunctionsState",
+      "DeleteInfo",
+      "RecordInfo",
+      "IEpochAccessor",
+      "ReadInfo",
+      "ReadInfo",
+      "Status",
+      "RecordMetadata",
+      "RMWInfo",
+      "VectorManager.ContextMetadata",
+      "VectorManager",
+      "SpanByteFunctions",
+      "RMWAction",
+      "UpsertInfo",
+      "WriteReason"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Resp/HyperLogLog/HyperLogLog.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "HLL_DTYPE",
+      "HyperLogLog"
+    ],
+    "usings": [
+      "Garnet.common"
+    ],
+    "used_classes": [
+      "RawStringInput"
+    ],
+    "global_usings": []
+  },
+  "libs/server/AOF/AofHeader.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "AofHeader"
+    ],
+    "usings": [],
+    "used_classes": [
+      "AofEntryType"
+    ],
+    "global_usings": []
+  },
+  "libs/common/SimpleObjectPool.cs": {
+    "namespace": "Garnet.common",
+    "definitions": [
+      "SimpleObjectPool"
+    ],
+    "usings": [],
+    "used_classes": [
+      "LightConcurrentStack"
+    ],
+    "global_usings": []
+  },
+  "test/Garnet.test/Resp/ACL/UserAclResult.cs": {
+    "namespace": "Garnet.test.Resp.ACL",
+    "definitions": [
+      "UserAclResult"
+    ],
+    "usings": [
+      "StackExchange.Redis"
+    ],
+    "used_classes": [
+      "RedisResult"
+    ],
+    "global_usings": []
+  },
+  "libs/cluster/Session/SlotVerification/ClusterSlotVerify.cs": {
+    "namespace": "Garnet.cluster",
+    "definitions": [
+      "ClusterSession"
+    ],
+    "usings": [
+      "Garnet.server"
+    ],
+    "used_classes": [
+      "IClusterSession",
+      "ArgSlice",
+      "basicGarnetApi",
+      "StoreType",
+      "GarnetStatus",
+      "ClusterSlotVerificationResult",
+      "ClusterConfig",
+      "ArgSliceUtils",
+      "clusterProvider",
+      "NodeRole",
+      "SlotVerifiedState",
+      "SlotState",
+      "readWriteSession",
+      "SessionParseState",
+      "ClusterSlotVerificationInput"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/test/SpanByteIterationTests.cs": {
+    "namespace": "Tsavorite.test",
+    "definitions": [
+      "SpanByteIterationTests",
+      "SpanBytePushIterationTestFunctions",
+      "IterationCollisionTestFunctions"
+    ],
+    "usings": [
+      "Allure.NUnit",
+      "Garnet.test",
+      "NUnit.Framework",
+      "NUnit.Framework.Legacy",
+      "Tsavorite.core",
+      "Tsavorite.test"
+    ],
+    "used_classes": [
+      "AllureTestBase",
+      "TsavoriteKV",
+      "SpanByte",
+      "SpanByteStoreFunctions",
+      "SpanByteAllocator",
+      "IDevice",
+      "IScanIteratorFunctions",
+      "RecordMetadata",
+      "CursorRecordResult",
+      "ClassicAssert",
+      "TestDeviceType",
+      "ScanIteratorType",
+      "Empty",
+      "VLVectorFunctions",
+      "ScanMode",
+      "Devices",
+      "StoreFunctions",
+      "SpanByteComparer",
+      "SpanByteRecordDisposer"
+    ],
+    "global_usings": []
+  },
+  "benchmark/Resp.benchmark/RespPerfBench.cs": {
+    "namespace": "Resp.benchmark",
+    "definitions": [
+      "RespPerfBench"
+    ],
+    "usings": [
+      "Garnet.client",
+      "Garnet.common",
+      "StackExchange.Redis"
+    ],
+    "used_classes": [
+      "Options",
+      "IConnectionMultiplexer",
+      "RedisKey",
+      "RedisValue",
+      "ReqGen",
+      "OpType",
+      "ClientType",
+      "LightClient",
+      "BenchUtils",
+      "RespReadResponseUtils",
+      "ConnectionMultiplexer",
+      "ClientBase",
+      "GarnetClientSession"
+    ],
+    "global_usings": []
+  },
+  "benchmark/Resp.benchmark/ReqGen.cs": {
+    "namespace": "Resp.benchmark",
+    "definitions": [
+      "ReqGen"
+    ],
+    "usings": [
+      "Garnet.common"
+    ],
+    "used_classes": [
+      "OpType",
+      "ZipfGenerator",
+      "RandomGenerator",
+      "NumUtils",
+      "RespReadUtils"
+    ],
+    "global_usings": []
+  },
+  "libs/common/Format.cs": {
+    "namespace": "Garnet.common",
+    "definitions": [
+      "ExtensionMethodsInternal",
+      "Format"
+    ],
+    "usings": [],
+    "used_classes": [
+      "NotNullWhen",
+      "EndPoint",
+      "Socket",
+      "IPEndPoint",
+      "IPAddress",
+      "ILogger",
+      "Dns",
+      "TcpClient",
+      "SocketException"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Resp/RespServerSessionOutput.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "RespServerSession"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "ServerSessionBase",
+      "SpanByteAndMemory",
+      "RespWriteUtils",
+      "RespStrings"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Resp/Vector/VectorManager.Migration.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "VectorManager"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "SpanByteAllocator",
+      "StoreFunctions",
+      "SpanByte",
+      "SpanByteComparer",
+      "SpanByteRecordDisposer",
+      "BasicContext",
+      "RawStringInput",
+      "SpanByteAndMemory",
+      "MainSessionFunctions",
+      "VectorInput",
+      "VectorSessionFunctions",
+      "GarnetException",
+      "RespCommand",
+      "ArgSlice",
+      "Status",
+      "GarnetDatabase",
+      "StoreWrapper",
+      "VectorQuantType",
+      "VectorDistanceMetricType",
+      "StorageSession",
+      "Index",
+      "GarnetStatus",
+      "HashSlotUtils"
+    ],
+    "global_usings": []
+  },
+  "test/Garnet.test/IndexGrowthTests.cs": {
+    "namespace": "Garnet.test",
+    "definitions": [
+      "IndexGrowthTests"
+    ],
+    "usings": [
+      "Allure.NUnit",
+      "NUnit.Framework",
+      "NUnit.Framework.Legacy",
+      "StackExchange.Redis"
+    ],
+    "used_classes": [
+      "AllureTestBase",
+      "GarnetServer",
+      "TestUtils",
+      "RedisKey",
+      "RedisValue",
+      "ConnectionMultiplexer",
+      "IDatabase",
+      "SaveType"
+    ],
+    "global_usings": []
+  },
+  "benchmark/Resp.benchmark/NumUtils.cs": {
+    "namespace": "Resp.benchmark",
+    "definitions": [
+      "NumUtils"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/server/Objects/Types/GarnetObject.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "GarnetObject"
+    ],
+    "usings": [],
+    "used_classes": [
+      "IGarnetObject",
+      "GarnetObjectType",
+      "SortedSetObject",
+      "ListObject",
+      "HashObject",
+      "SetObject",
+      "RespInputHeader",
+      "SortedSetOperation",
+      "ListOperation",
+      "SetOperation",
+      "HashOperation"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/test/SimpleRecoveryTest.cs": {
+    "namespace": "Tsavorite.test.recovery.sumstore",
+    "definitions": [
+      "CheckpointManagerWithCookie",
+      "RecoveryTests"
+    ],
+    "usings": [
+      "Allure.NUnit",
+      "Garnet.test",
+      "Tsavorite.core",
+      "Tsavorite.devices",
+      "Tsavorite.test"
+    ],
+    "used_classes": [
+      "DeviceLogCommitCheckpointManager",
+      "INamedDeviceFactoryCreator",
+      "ICheckpointNamingScheme",
+      "ILogger",
+      "AllureTestBase",
+      "AdId",
+      "NumClicks",
+      "StoreFunctions",
+      "DefaultRecordDisposer",
+      "BlittableAllocator",
+      "TsavoriteKV",
+      "IDevice",
+      "CheckpointType",
+      "CompletionSyncMode",
+      "TestUtils",
+      "AzureCheckpointNamingScheme",
+      "LocalStorageNamedDeviceFactoryCreator",
+      "DefaultCheckpointNamingScheme",
+      "Devices",
+      "AdInput",
+      "Output",
+      "Empty",
+      "AdSimpleFunctions",
+      "ClassicAssert"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Resp/Bitmap/BitmapCommands.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "BitmapOperation",
+      "BitFieldOverflow",
+      "BitFieldSign",
+      "BitFieldCmdArgs",
+      "RespServerSession"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "SecondaryCommandList",
+      "RespCommand",
+      "ArgSlice",
+      "ServerSessionBase",
+      "IGarnetApi",
+      "BitmapManager",
+      "CmdStrings",
+      "RawStringInput",
+      "SpanByteAndMemory",
+      "GarnetStatus",
+      "RespWriteUtils"
+    ],
+    "global_usings": []
+  },
+  "modules/GarnetJSON/JSONPath/JsonPath.cs": {
+    "namespace": "GarnetJSON.JSONPath",
+    "definitions": [
+      "JsonPath"
+    ],
+    "usings": [],
+    "used_classes": [
+      "PathFilter",
+      "FieldFilter",
+      "ArrayIndexFilter",
+      "RootFilter",
+      "JsonSelectSettings",
+      "ScanFilter"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Allocator/AllocatorRecord.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "AllocatorRecord"
+    ],
+    "usings": [],
+    "used_classes": [
+      "RecordInfo"
+    ],
+    "global_usings": []
+  },
+  "benchmark/BDN.benchmark/Embedded/GarnetServerEmbedded.cs": {
+    "namespace": "Embedded.server",
+    "definitions": [
+      "GarnetServerEmbedded"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Garnet.networking",
+      "Garnet.server"
+    ],
+    "used_classes": [
+      "GarnetServerBase",
+      "IServerHook",
+      "IPEndPoint",
+      "IPAddress",
+      "IMessageConsumer",
+      "IClusterSession",
+      "RespServerSession",
+      "EmbeddedNetworkHandler",
+      "SslClientAuthenticationOptions",
+      "EmbeddedNetworkSender",
+      "NetworkBufferSettings",
+      "INetworkHandler",
+      "INetworkSender",
+      "WireFormat"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Custom/CommandType.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "CommandType"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/test/SpanByteLogScanTests.cs": {
+    "namespace": "Tsavorite.test.spanbyte",
+    "definitions": [
+      "SpanByteComparerModulo",
+      "SpanByteLogScanTests",
+      "ScanFunctions",
+      "RCULocation",
+      "ScanCursorFuncs"
+    ],
+    "usings": [
+      "Allure.NUnit",
+      "Garnet.test",
+      "NUnit.Framework",
+      "NUnit.Framework.Legacy",
+      "Tsavorite.core",
+      "Tsavorite.test"
+    ],
+    "used_classes": [
+      "IKeyComparer",
+      "SpanByte",
+      "SpanByteComparer",
+      "StoreFunctions",
+      "SpanByteRecordDisposer",
+      "AllureTestBase",
+      "TsavoriteKV",
+      "SpanByteAllocator",
+      "IDevice",
+      "HashModulo",
+      "TestContext",
+      "Devices",
+      "SpanByteFunctions",
+      "Empty",
+      "SpanByteAndMemory",
+      "UpsertInfo",
+      "WriteReason",
+      "RecordInfo",
+      "ScanCursorFuncs",
+      "ClassicAssert",
+      "ReadOptions",
+      "IScanIteratorFunctions"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Index/Recovery/Recovery.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "ReadStatus",
+      "FlushStatus",
+      "RecoveryStatus",
+      "RecoveryOptions",
+      "LogFileInfo",
+      "TsavoriteKV"
+    ],
+    "usings": [],
+    "used_classes": [
+      "CheckpointType",
+      "IDevice",
+      "TsavoriteException",
+      "TsavoriteBase",
+      "IStoreFunctions",
+      "IAllocator",
+      "Guid",
+      "HybridLogCheckpointInfo",
+      "IndexCheckpointInfo",
+      "IndexRecoveryInfo",
+      "HybridLogRecoveryInfo",
+      "TsavoriteNoHybridLogException"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Cluster/CheckpointMetadata.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "CheckpointMetadata"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/server/Resp/RespCommandDocs.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "RespCommandDocs",
+      "RespCommandGroup",
+      "RespCommandDocFlags"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Garnet.server.Resp"
+    ],
+    "used_classes": [
+      "IRespSerializable",
+      "IRespCommandData",
+      "RespCommand",
+      "EnumUtils",
+      "RespCommandArgumentBase",
+      "RespCommandDataCommon",
+      "RespCommandsInfo",
+      "RespMemoryWriter"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Index/Interfaces/TryAddFunctions.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "TryAddFunctions<TKey, TValue, TContext>",
+      "TryAddFunctions<TKey, TValue>"
+    ],
+    "usings": [],
+    "used_classes": [
+      "SimpleSessionFunctions",
+      "RMWInfo",
+      "RecordInfo",
+      "Empty"
+    ],
+    "global_usings": []
+  },
+  "libs/common/FailoverOption.cs": {
+    "namespace": "Garnet.common",
+    "definitions": [
+      "FailoverOption",
+      "FailoverUtils"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/devices/AzureStorageDevice/AzureStorageNamedDeviceFactoryCreator.cs": {
+    "namespace": "Tsavorite.devices",
+    "definitions": [
+      "AzureStorageNamedDeviceFactoryCreator"
+    ],
+    "usings": [
+      "Azure.Core",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "INamedDeviceFactoryCreator",
+      "BlobUtilsV12.ServiceClients",
+      "TokenCredential",
+      "BlobUtilsV12",
+      "INamedDeviceFactory",
+      "AzureStorageNamedDeviceFactory"
+    ],
+    "global_usings": []
+  },
+  "libs/common/LightClientTcpNetworkHandler.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "LightClientTcpNetworkHandler"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Garnet.networking"
+    ],
+    "used_classes": [
+      "TcpNetworkHandler",
+      "LightClient",
+      "Socket",
+      "NetworkBufferSettings",
+      "LimitedFixedBufferPool",
+      "IMessageConsumer"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Index/Tsavorite/Implementation/Revivification/CheckEmptyWorker.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "CheckEmptyWorker",
+      "State"
+    ],
+    "usings": [],
+    "used_classes": [
+      "IStoreFunctions",
+      "IAllocator",
+      "FreeRecordPool",
+      "CancellationTokenSource"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Index/Tsavorite/HashBucketEntry.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "HashBucketEntry"
+    ],
+    "usings": [],
+    "used_classes": [
+      "Constants",
+      "Utility"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Transaction/TxnKeyManager.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "TransactionManager"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "ArgSlice",
+      "LockType",
+      "StoreType",
+      "MemoryResult",
+      "TxnState",
+      "SimpleRespCommandInfo",
+      "KeySpecificationFlags"
+    ],
+    "global_usings": []
+  },
+  "libs/client/ClientSession/GarnetClientSessionIncremental.cs": {
+    "namespace": "Garnet.client",
+    "definitions": [
+      "IncrementalSendType",
+      "GarnetClientSession"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Garnet.networking",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "IServerHook",
+      "IMessageConsumer",
+      "RespWriteUtils",
+      "SpanByte"
+    ],
+    "global_usings": []
+  },
+  "playground/Bitmap/BitOp.cs": {
+    "namespace": "Bitmap",
+    "definitions": [
+      "BitOp"
+    ],
+    "usings": [
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "SectorAlignedMemory",
+      "MemoryPoolBuffers"
+    ],
+    "global_usings": []
+  },
+  "test/Garnet.test/GarnetJSON/JsonCommandsTest.cs": {
+    "namespace": "Garnet.test",
+    "definitions": [
+      "JsonCommandsTest"
+    ],
+    "usings": [
+      "Allure.NUnit",
+      "Garnet.server",
+      "GarnetJSON",
+      "NUnit.Framework",
+      "NUnit.Framework.Legacy",
+      "StackExchange.Redis"
+    ],
+    "used_classes": [
+      "AllureTestBase",
+      "GarnetServer",
+      "TestUtils",
+      "Garnet.server.Auth.Settings.ConnectionProtectionOption",
+      "ConnectionMultiplexer",
+      "RedisServerException",
+      "ClassicAssert"
+    ],
+    "global_usings": []
+  },
+  "libs/host/Configuration/Redis/RedisOptions.cs": {
+    "namespace": "Garnet",
+    "definitions": [
+      "RedisOptions",
+      "Option",
+      "RedisOptionAttribute"
+    ],
+    "usings": [],
+    "used_classes": [
+      "Options",
+      "CommandLineBooleanOption",
+      "RedisConnectionProtectionOption",
+      "RedisBoolean",
+      "NonDefaultObjectToBooleanTransformer",
+      "RedisTlsAuthClients",
+      "RedisLogLevel"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/devices/AzureStorageDevice/AzureCheckpointNamingScheme.cs": {
+    "namespace": "Tsavorite.devices",
+    "definitions": [
+      "AzureCheckpointNamingScheme"
+    ],
+    "usings": [
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "ICheckpointNamingScheme",
+      "DeviceLogCommitCheckpointManager",
+      "FileDescriptor",
+      "Guid"
+    ],
+    "global_usings": []
+  },
+  "libs/cluster/Server/Replication/ReplicaOps/ReplicaReplayTask.cs": {
+    "namespace": "Garnet.cluster",
+    "definitions": [
+      "ReplicationManager"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "IBulkLogEntryConsumer",
+      "IDisposable",
+      "TsavoriteLogScanSingleIterator",
+      "CancellationTokenSource",
+      "SingleWriterMultiReaderLock",
+      "GarnetException",
+      "TsavoriteLogRecoveryInfo",
+      "TsavoriteLog",
+      "LogLevel"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/ClientSession/BasicContext.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "BasicContext"
+    ],
+    "usings": [],
+    "used_classes": [
+      "ITsavoriteContext",
+      "ISessionFunctions",
+      "IStoreFunctions",
+      "IAllocator",
+      "ClientSession",
+      "SessionFunctionsWrapper",
+      "BasicSessionLocker",
+      "TsavoriteKV",
+      "CompletedOutputIterator",
+      "Status",
+      "IReadArgBatch",
+      "ReadOptions",
+      "RecordMetadata",
+      "UpsertOptions"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Index/Tsavorite/Implementation/Revivification/RevivificationStats.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "RevivificationStats"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/server/Objects/ItemBroker/CollectionItemBroker.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "CollectionItemBroker"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Tsavorite.core"
+    ],
+    "used_classes": [
+      "AsyncQueue",
+      "CollectionItemBrokerEvent",
+      "CollectionItemObserver",
+      "SingleWriterMultiReaderLock",
+      "CollectionItemResult",
+      "RespCommand",
+      "RespServerSession",
+      "ArgSlice",
+      "ObserverStatus",
+      "CollectionItemBrokerEventType",
+      "ByteArrayComparer"
+    ],
+    "global_usings": []
+  },
+  "libs/cluster/Server/Replication/ReplicateSyncOptions.cs": {
+    "namespace": "Garnet.cluster.Server.Replication",
+    "definitions": [
+      "ReplicateSyncOptions"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/client/GarnetClientAPI/GarnetClientBasicRespCommands.cs": {
+    "namespace": "Garnet.client",
+    "definitions": [
+      "GarnetClient"
+    ],
+    "usings": [
+      "Garnet.common"
+    ],
+    "used_classes": [
+      "MemoryResult"
+    ],
+    "global_usings": []
+  },
+  "libs/server/Resp/Parser/ParseUtils.cs": {
+    "namespace": "Garnet.server",
+    "definitions": [
+      "ParseUtils"
+    ],
+    "usings": [
+      "Garnet.common",
+      "Garnet.common.Parsing"
+    ],
+    "used_classes": [
+      "ArgSlice",
+      "RespReadUtils",
+      "RespParsingException"
+    ],
+    "global_usings": []
+  },
+  "libs/storage/Tsavorite/cs/src/core/Allocator/ScanCursorState.cs": {
+    "namespace": "Tsavorite.core",
+    "definitions": [
+      "ScanCursorState"
+    ],
+    "usings": [],
+    "used_classes": [
+      "IScanIteratorFunctions"
+    ],
+    "global_usings": []
+  },
+  "libs/cluster/Session/ClusterCommandInfo.cs": {
+    "namespace": "Garnet.cluster",
+    "definitions": [
+      "ClusterCommandInfo"
+    ],
+    "usings": [],
+    "used_classes": [],
+    "global_usings": []
+  },
+  "libs/common/RespReadUtils.cs": {
+    "namespace": "Garnet.common",
+    "definitions": [
+      "RespReadUtils"
+    ],
+    "usings": [
+      "Garnet.common.Parsing"
+    ],
+    "used_classes": [
+      "RespParsingException"
+    ],
+    "global_usings": []
+  }
+}

@@ -1,0 +1,567 @@
+{
+  "tools/mtmd/mtmd-audio.cpp": {
+    "local_includes": [
+      "mtmd-audio.h"
+    ],
+    "system_includes": [
+      "cmath",
+      "cstdint",
+      "cstring",
+      "thread",
+      "vector",
+      "fstream",
+      "algorithm"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-backend.cpp": {
+    "local_includes": [
+      "ggml-backend.h",
+      "ggml-backend-impl.h",
+      "ggml-alloc.h",
+      "ggml-impl.h"
+    ],
+    "system_includes": [
+      "windows.h",
+      "assert.h",
+      "limits.h",
+      "stdarg.h",
+      "stdio.h",
+      "stdlib.h",
+      "string.h",
+      "algorithm",
+      "vector",
+      "sys/types.h",
+      "sys/sysctl.h"
+    ],
+    "forward_declarations": []
+  },
+  "common/llguidance.cpp": {
+    "local_includes": [
+      "sampling.h",
+      "log.h",
+      "llguidance.h"
+    ],
+    "system_includes": [
+      "cmath"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/mmvq.hpp": {
+    "local_includes": [
+      "common.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/concat.hpp": {
+    "local_includes": [
+      "common.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-hexagon/htp/unary-ops.c": {
+    "local_includes": [
+      "hex-dma.h",
+      "hvx-utils.h",
+      "ggml-common.h",
+      "htp-ctx.h",
+      "htp-msg.h",
+      "htp-ops.h"
+    ],
+    "system_includes": [
+      "HAP_farf.h",
+      "HAP_perf.h",
+      "math.h",
+      "string.h"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-cpu/ops.h": {
+    "local_includes": [
+      "ggml.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": [
+      "ggml_compute_params",
+      "ggml_tensor"
+    ]
+  },
+  "ggml/include/ggml-webgpu.h": {
+    "local_includes": [
+      "ggml.h",
+      "ggml-backend.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "tools/server/server-http.h": {
+    "local_includes": [],
+    "system_includes": [
+      "atomic",
+      "functional",
+      "map",
+      "string",
+      "thread"
+    ],
+    "forward_declarations": [
+      "common_params",
+      "Impl"
+    ]
+  },
+  "src/models/qwen35.cpp": {
+    "local_includes": [
+      "models.h",
+      "llama-memory-recurrent.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/include/ggml-alloc.h": {
+    "local_includes": [
+      "ggml.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": [
+      "ggml_backend_buffer_type",
+      "ggml_backend_buffer",
+      "ggml_backend",
+      "ggml_gallocr",
+      "ggml_tensor",
+      "ggml_cgraph",
+      "ggml_context"
+    ]
+  },
+  "tests/test-grammar-parser.cpp": {
+    "local_includes": [
+      "llama.h",
+      "../src/llama-grammar.h"
+    ],
+    "system_includes": [
+      "cassert"
+    ],
+    "forward_declarations": []
+  },
+  "src/llama-hparams.h": {
+    "local_includes": [
+      "llama.h"
+    ],
+    "system_includes": [
+      "array",
+      "cassert"
+    ],
+    "forward_declarations": []
+  },
+  "common/ngram-mod.cpp": {
+    "local_includes": [
+      "ngram-mod.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "common/ngram-map.cpp": {
+    "local_includes": [
+      "common.h",
+      "log.h",
+      "ngram-map.h"
+    ],
+    "system_includes": [
+      "cinttypes",
+      "cstdint",
+      "cstdio",
+      "sstream"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/include/ggml-cuda.h": {
+    "local_includes": [
+      "ggml.h",
+      "ggml-backend.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-hexagon/htp/rope-ops.c": {
+    "local_includes": [
+      "hex-dma.h",
+      "hvx-utils.h",
+      "hex-fastdiv.h",
+      "ggml-common.h",
+      "htp-ctx.h",
+      "htp-msg.h",
+      "htp-ops.h"
+    ],
+    "system_includes": [
+      "HAP_farf.h",
+      "HAP_perf.h",
+      "math.h",
+      "string.h"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-metal/ggml-metal-ops.h": {
+    "local_includes": [
+      "ggml-metal-device.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": [
+      "ggml_metal_op",
+      "ggml_cgraph",
+      "ggml_tensor"
+    ]
+  },
+  "src/models/jais.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "tests/test-quantize-perf.cpp": {
+    "local_includes": [
+      "ggml.h",
+      "ggml-cpu.h"
+    ],
+    "system_includes": [
+      "algorithm",
+      "assert.h",
+      "functional",
+      "math.h",
+      "memory",
+      "stdio.h",
+      "string",
+      "vector",
+      "x86intrin.h"
+    ],
+    "forward_declarations": []
+  },
+  "common/log.h": {
+    "local_includes": [
+      "ggml.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": [
+      "common_log"
+    ]
+  },
+  "src/models/stablelm.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-hexagon/htp/hex-utils.h": {
+    "local_includes": [
+      "hexagon_types.h",
+      "hex-fastdiv.h",
+      "hex-dump.h"
+    ],
+    "system_includes": [
+      "stdbool.h",
+      "stdint.h"
+    ],
+    "forward_declarations": []
+  },
+  "tools/mtmd/models/kimik25.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [
+      "cstring",
+      "cmath"
+    ],
+    "forward_declarations": []
+  },
+  "src/llama-graph.cpp": {
+    "local_includes": [
+      "llama-graph.h",
+      "llama-impl.h",
+      "llama-batch.h",
+      "llama-cparams.h",
+      "llama-kv-cache.h",
+      "llama-kv-cache-iswa.h",
+      "llama-memory-hybrid.h",
+      "llama-memory-hybrid-iswa.h",
+      "llama-memory-recurrent.h"
+    ],
+    "system_includes": [
+      "cassert",
+      "cmath",
+      "cstring",
+      "numeric",
+      "sstream",
+      "unordered_set"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-hexagon/htp/softmax-ops.c": {
+    "local_includes": [
+      "hex-dma.h",
+      "hvx-utils.h",
+      "hex-fastdiv.h",
+      "ggml-common.h",
+      "htp-ctx.h",
+      "htp-msg.h",
+      "htp-ops.h"
+    ],
+    "system_includes": [
+      "HAP_farf.h",
+      "HAP_perf.h",
+      "math.h",
+      "string.h"
+    ],
+    "forward_declarations": []
+  },
+  "src/llama-quant.h": {
+    "local_includes": [],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "tests/test-grammar-llguidance.cpp": {
+    "local_includes": [
+      "sampling.h"
+    ],
+    "system_includes": [
+      "cassert",
+      "string",
+      "vector"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/outprod.cpp": {
+    "local_includes": [
+      "outprod.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "common/chat-auto-parser.h": {
+    "local_includes": [
+      "chat.h",
+      "common.h",
+      "jinja/caps.h",
+      "peg-parser.h"
+    ],
+    "system_includes": [
+      "chrono",
+      "optional",
+      "string",
+      "utility",
+      "vector"
+    ],
+    "forward_declarations": [
+      "common_chat_peg_builder"
+    ]
+  },
+  "ggml/src/ggml-cpu/arch/loongarch/quants.c": {
+    "local_includes": [
+      "ggml-common.h",
+      "ggml-quants.h",
+      "ggml-impl.h",
+      "ggml-cpu.h",
+      "simd-mappings.h",
+      "../../quants.h",
+      "../../ggml-cpu-impl.h"
+    ],
+    "system_includes": [
+      "math.h",
+      "string.h",
+      "assert.h",
+      "float.h",
+      "stdlib.h",
+      "stdio.h"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/template-instances/fattn-vec-instance-q5_1-f16.cpp": {
+    "local_includes": [
+      "../fattn-vec.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-cpu/amx/mmq.h": {
+    "local_includes": [
+      "common.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": [
+      "ggml_tensor",
+      "ggml_compute_params"
+    ]
+  },
+  "ggml/src/ggml-hexagon/htp/hvx-utils.h": {
+    "local_includes": [
+      "hex-utils.h",
+      "hvx-types.h",
+      "hvx-copy.h",
+      "hvx-scale.h",
+      "hvx-exp.h",
+      "hvx-inverse.h",
+      "hvx-reduce.h",
+      "hvx-sigmoid.h",
+      "hvx-sqrt.h",
+      "hvx-arith.h",
+      "hvx-div.h",
+      "hvx-base.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/template-instances/fattn-vec-instance-q5_0-q4_1.cpp": {
+    "local_includes": [
+      "../fattn-vec.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/include/ggml-cpu.h": {
+    "local_includes": [
+      "ggml.h",
+      "ggml-backend.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-virtgpu/backend/backend-virgl-apir.h": {
+    "local_includes": [
+      "ggml-backend-impl.h",
+      "ggml-backend.h",
+      "ggml-impl.h",
+      "shared/api_remoting.h"
+    ],
+    "system_includes": [
+      "cstdarg",
+      "cstdio",
+      "cstdlib"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/include/ggml-opt.h": {
+    "local_includes": [
+      "ggml.h",
+      "ggml-backend.h"
+    ],
+    "system_includes": [
+      "stdint.h"
+    ],
+    "forward_declarations": [
+      "ggml_opt_dataset",
+      "ggml_opt_context",
+      "ggml_opt_result"
+    ]
+  },
+  "ggml/src/ggml-virtgpu/virtgpu-apir.h": {
+    "local_includes": [
+      "backend/shared/apir_backend.h",
+      "ggml-alloc.h",
+      "ggml-impl.h",
+      "ggml.h",
+      "virtgpu-shm.h",
+      "virtgpu-utils.h",
+      "virtgpu-forward.gen.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/template-instances/fattn-vec-instance-q5_1-q5_1.cpp": {
+    "local_includes": [
+      "../fattn-vec.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/gemm.hpp": {
+    "local_includes": [
+      "ggml-sycl.h",
+      "dnnl.hpp",
+      "dnnl_sycl.hpp"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "common/speculative.cpp": {
+    "local_includes": [
+      "speculative.h",
+      "common.h",
+      "ggml.h",
+      "llama.h",
+      "log.h",
+      "ngram-cache.h",
+      "ngram-map.h",
+      "ngram-mod.h",
+      "sampling.h"
+    ],
+    "system_includes": [
+      "algorithm",
+      "cstring",
+      "iomanip",
+      "map"
+    ],
+    "forward_declarations": []
+  },
+  "src/models/apertus.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "src/models/plamo.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-cann/acl_tensor.h": {
+    "local_includes": [
+      "common.h"
+    ],
+    "system_includes": [
+      "aclnn/aclnn_base.h",
+      "algorithm",
+      "cstring"
+    ],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-virtgpu/backend/backend-dispatched.gen.h": {
+    "local_includes": [],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "examples/passkey/passkey.cpp": {
+    "local_includes": [
+      "arg.h",
+      "common.h",
+      "log.h",
+      "llama.h"
+    ],
+    "system_includes": [
+      "clocale",
+      "cmath",
+      "cstdio",
+      "string",
+      "vector",
+      "algorithm"
+    ],
+    "forward_declarations": []
+  },
+  "src/models/rnd1.cpp": {
+    "local_includes": [
+      "models.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  },
+  "ggml/src/ggml-sycl/set.hpp": {
+    "local_includes": [
+      "backend.hpp",
+      "ggml.h"
+    ],
+    "system_includes": [],
+    "forward_declarations": []
+  }
+}

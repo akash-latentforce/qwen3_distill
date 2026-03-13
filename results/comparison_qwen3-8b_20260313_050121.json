@@ -1,0 +1,171 @@
+{
+  "garnet": {
+    "files_compared": 50,
+    "fields": {
+      "namespace": {
+        "gemini_avg": 1.0,
+        "qwen_avg": 0.74,
+        "recall": 0.74,
+        "precision": 0.74,
+        "f1": 0.74,
+        "exact_match": 0.74
+      },
+      "definitions": {
+        "gemini_avg": 1.54,
+        "qwen_avg": 1.18,
+        "recall": 0.7087,
+        "precision": 0.6817,
+        "f1": 0.6949,
+        "exact_match": 0.62
+      },
+      "usings": {
+        "gemini_avg": 1.34,
+        "qwen_avg": 2.42,
+        "recall": 0.47,
+        "precision": 0.3041,
+        "f1": 0.3692,
+        "exact_match": 0.18
+      },
+      "used_classes": {
+        "gemini_avg": 6.7,
+        "qwen_avg": 6.66,
+        "recall": 0.4871,
+        "precision": 0.3893,
+        "f1": 0.4328,
+        "exact_match": 0.2
+      },
+      "global_usings": {
+        "gemini_avg": 0.0,
+        "qwen_avg": 0.0,
+        "recall": 1.0,
+        "precision": 1.0,
+        "f1": 1.0,
+        "exact_match": 1.0
+      }
+    }
+  },
+  "anime": {
+    "files_compared": 50,
+    "fields": {
+      "definitions": {
+        "gemini_avg": 1.54,
+        "qwen_avg": 4.76,
+        "recall": 0.53,
+        "precision": 0.4905,
+        "f1": 0.5095,
+        "exact_match": 0.44
+      },
+      "references": {
+        "gemini_avg": 7.28,
+        "qwen_avg": 7.78,
+        "recall": 0.9733,
+        "precision": 0.9542,
+        "f1": 0.9636,
+        "exact_match": 0.84
+      }
+    }
+  },
+  "llama.cpp": {
+    "files_compared": 49,
+    "fields": {
+      "local_includes": {
+        "gemini_avg": 2.65,
+        "qwen_avg": 2.57,
+        "recall": 0.8571,
+        "precision": 0.8497,
+        "f1": 0.8534,
+        "exact_match": 0.8367
+      },
+      "system_includes": {
+        "gemini_avg": 1.9,
+        "qwen_avg": 1.86,
+        "recall": 0.8595,
+        "precision": 0.8735,
+        "f1": 0.8664,
+        "exact_match": 0.7959
+      },
+      "forward_declarations": {
+        "gemini_avg": 0.43,
+        "qwen_avg": 0.88,
+        "recall": 0.812,
+        "precision": 0.8136,
+        "f1": 0.8128,
+        "exact_match": 0.7959
+      }
+    }
+  },
+  "langchain4j": {
+    "files_compared": 50,
+    "fields": {
+      "package": {
+        "gemini_avg": 1.0,
+        "qwen_avg": 0.84,
+        "recall": 0.84,
+        "precision": 0.84,
+        "f1": 0.84,
+        "exact_match": 0.84
+      },
+      "definitions": {
+        "gemini_avg": 1.4,
+        "qwen_avg": 1.0,
+        "recall": 0.76,
+        "precision": 0.77,
+        "f1": 0.765,
+        "exact_match": 0.74
+      },
+      "imports": {
+        "gemini_avg": 4.34,
+        "qwen_avg": 4.8,
+        "recall": 0.5667,
+        "precision": 0.363,
+        "f1": 0.4425,
+        "exact_match": 0.12
+      },
+      "used_classes": {
+        "gemini_avg": 5.48,
+        "qwen_avg": 6.12,
+        "recall": 0.6801,
+        "precision": 0.4412,
+        "f1": 0.5352,
+        "exact_match": 0.14
+      },
+      "static_imports": {
+        "gemini_avg": 0.68,
+        "qwen_avg": 0.46,
+        "recall": 0.78,
+        "precision": 0.766,
+        "f1": 0.7729,
+        "exact_match": 0.74
+      }
+    }
+  },
+  "checkmate": {
+    "files_compared": 50,
+    "fields": {
+      "imports": {
+        "gemini_avg": 1.06,
+        "qwen_avg": 1.74,
+        "recall": 0.901,
+        "precision": 0.8379,
+        "f1": 0.8683,
+        "exact_match": 0.7
+      },
+      "definitions": {
+        "gemini_avg": 1.36,
+        "qwen_avg": 1.2,
+        "recall": 0.8827,
+        "precision": 0.84,
+        "f1": 0.8608,
+        "exact_match": 0.72
+      },
+      "references": {
+        "gemini_avg": 0.06,
+        "qwen_avg": 0.44,
+        "recall": 0.9,
+        "precision": 0.9,
+        "f1": 0.9,
+        "exact_match": 0.9
+      }
+    }
+  }
+}

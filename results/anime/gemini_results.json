@@ -1,0 +1,1801 @@
+{
+  "examples/text/split-playground/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createScope",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "splitText",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "Scope",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/accordion/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "spring",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/svg/drawable.js": {
+    "definitions": [
+      "createDrawable"
+    ],
+    "references": [
+      {
+        "name": "K",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "proxyTargetSymbol",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "sqrt",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isFnc",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "parseTargets",
+        "source": "../core/targets.js"
+      },
+      {
+        "name": "TargetsParam",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "DrawableSVGGeometry",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "src/engine/engine.js": {
+    "definitions": [
+      "engine"
+    ],
+    "references": [
+      {
+        "name": "defaults",
+        "source": "../core/globals.js"
+      },
+      {
+        "name": "globals",
+        "source": "../core/globals.js"
+      },
+      {
+        "name": "globalVersions",
+        "source": "../core/globals.js"
+      },
+      {
+        "name": "tickModes",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "isBrowser",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "K",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "doc",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "now",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "removeChild",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "Clock",
+        "source": "../core/clock.js"
+      },
+      {
+        "name": "tick",
+        "source": "../core/render.js"
+      },
+      {
+        "name": "additive",
+        "source": "../animation/additive.js"
+      },
+      {
+        "name": "DefaultsParams",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "Tickable",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "src/easings/eases/parser.js": {
+    "definitions": [
+      "easeInPower",
+      "easeTypes",
+      "eases",
+      "parseEaseString",
+      "parseEase"
+    ],
+    "references": [
+      {
+        "name": "minValue",
+        "source": "../../core/consts.js"
+      },
+      {
+        "name": "emptyString",
+        "source": "../../core/consts.js"
+      },
+      {
+        "name": "isStr",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "isFnc",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "clamp",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "sqrt",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "cos",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "sin",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "asin",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "PI",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "pow",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "stringStartsWith",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "none",
+        "source": "../none.js"
+      }
+    ]
+  },
+  "src/animatable/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "*",
+        "source": "./animatable.js"
+      }
+    ]
+  },
+  "examples/text/hover-effects/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createScope",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createSpring",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "splitText",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "tests/suites/leaks.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "../utils.js"
+      },
+      {
+        "name": "engine",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/onscroll-responsive-scope/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createScope",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "tests/playground/onscroll/assets/sticky-snap.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "utils",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/code/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "$",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "random",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/cards/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/onscroll-sticky/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/easings/cubic-bezier/index.js": {
+    "definitions": [
+      "cubicBezier"
+    ],
+    "references": [
+      {
+        "name": "abs",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "none",
+        "source": "../none.js"
+      },
+      {
+        "name": "EasingFunction",
+        "source": "../../types/index.js"
+      }
+    ]
+  },
+  "src/easings/linear/index.js": {
+    "definitions": [
+      "linear"
+    ],
+    "references": [
+      {
+        "name": "isStr",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "isUnd",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "parseNumber",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "none",
+        "source": "../none.js"
+      },
+      {
+        "name": "EasingFunction",
+        "source": "../../types/index.js"
+      }
+    ]
+  },
+  "tests/suites/build.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "*",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "*",
+        "source": "../../../dist/bundles/anime.esm.js"
+      },
+      {
+        "name": "*",
+        "source": "../../../dist/bundles/anime.esm.min.js"
+      }
+    ]
+  },
+  "tests/suites/values.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildAtIndex",
+        "source": "../utils.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "../utils.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "unitsExecRgx",
+        "source": "../../dist/modules/core/consts.js"
+      },
+      {
+        "name": "valueTypes",
+        "source": "../../dist/modules/core/consts.js"
+      }
+    ]
+  },
+  "src/core/values.js": {
+    "definitions": [
+      "setValue",
+      "getFunctionValue",
+      "getTweenType",
+      "getOriginalAnimatableValue",
+      "getRelativeValue",
+      "createDecomposedValueTargetObject",
+      "decomposeRawValue",
+      "decomposeTweenValue",
+      "decomposedOriginalValue"
+    ],
+    "references": [
+      {
+        "name": "shortTransforms",
+        "source": "./consts.js"
+      },
+      {
+        "name": "validTransforms",
+        "source": "./consts.js"
+      },
+      {
+        "name": "tweenTypes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "valueTypes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "digitWithExponentRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "unitsExecRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "isDomSymbol",
+        "source": "./consts.js"
+      },
+      {
+        "name": "isSvgSymbol",
+        "source": "./consts.js"
+      },
+      {
+        "name": "proxyTargetSymbol",
+        "source": "./consts.js"
+      },
+      {
+        "name": "cssVarPrefix",
+        "source": "./consts.js"
+      },
+      {
+        "name": "cssVariableMatchRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "emptyString",
+        "source": "./consts.js"
+      },
+      {
+        "name": "stringStartsWith",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "cloneArray",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "isFnc",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "isUnd",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "isCol",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "isValidSVGAttribute",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "isStr",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "parseInlineTransforms",
+        "source": "./transforms.js"
+      },
+      {
+        "name": "convertColorStringValuesToRgbaArray",
+        "source": "./colors.js"
+      },
+      {
+        "name": "Target",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "DOMTarget",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "Tween",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "TweenPropValue",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "TweenDecomposedValue",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "tests/suites/timelines.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildAtIndex",
+        "source": "../utils.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "eases",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "steps",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimer",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "compositionTypes",
+        "source": "../../dist/modules/core/consts.js"
+      },
+      {
+        "name": "minValue",
+        "source": "../../dist/modules/core/consts.js"
+      }
+    ]
+  },
+  "tests/playground/onscroll/assets/standalone.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "utils",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/easings/eases/index.js": {
+    "definitions": [
+      "eases"
+    ],
+    "references": [
+      {
+        "name": "eases",
+        "source": "./parser.js"
+      }
+    ]
+  },
+  "tests/playground/scope/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createScope",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/svg/helpers.js": {
+    "definitions": [
+      "getPath"
+    ],
+    "references": [
+      {
+        "name": "isSvg",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "parseTargets",
+        "source": "../core/targets.js"
+      },
+      {
+        "name": "TargetsParam",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "examples/additive-creature/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimer",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/core/clock.js": {
+    "definitions": [
+      "Clock"
+    ],
+    "references": [
+      {
+        "name": "K",
+        "source": "./consts.js"
+      },
+      {
+        "name": "maxFps",
+        "source": "./consts.js"
+      },
+      {
+        "name": "minValue",
+        "source": "./consts.js"
+      },
+      {
+        "name": "tickModes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "defaults",
+        "source": "./globals.js"
+      },
+      {
+        "name": "Tickable",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "Tween",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "tests/suites/targets.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildLength",
+        "source": "../utils.js"
+      },
+      {
+        "name": "testObject",
+        "source": "../setup.js"
+      },
+      {
+        "name": "anOtherTestObject",
+        "source": "../setup.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/utils/stagger.js": {
+    "definitions": [
+      "stagger"
+    ],
+    "references": [
+      {
+        "name": "emptyString",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "unitsExecRgx",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "isArr",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isUnd",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isNum",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "parseNumber",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "round",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "abs",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "floor",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "sqrt",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "max",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isStr",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isFnc",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "parseEase",
+        "source": "../easings/eases/parser.js"
+      },
+      {
+        "name": "parseTimelinePosition",
+        "source": "../timeline/position.js"
+      },
+      {
+        "name": "getOriginalAnimatableValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "registerTargets",
+        "source": "../core/targets.js"
+      },
+      {
+        "name": "shuffle",
+        "source": "./random.js"
+      }
+    ]
+  },
+  "tests/suites/eases.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "eases",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "cubicBezier",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "spring",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "linear",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "steps",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/animation/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "*",
+        "source": "./animation.js"
+      }
+    ]
+  },
+  "tests/suites/scroll.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "scrollContainers",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/utils/random.js": {
+    "definitions": [
+      "random",
+      "createSeededRandom",
+      "randomPick",
+      "shuffle"
+    ],
+    "references": []
+  },
+  "examples/auto-layout/todo-list/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "spring",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "$",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/periodic-table/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "spring",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimer",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "createAnimatable",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/core/transforms.js": {
+    "definitions": [
+      "parseInlineTransforms"
+    ],
+    "references": [
+      {
+        "name": "transformsExecRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "transformsSymbol",
+        "source": "./consts.js"
+      },
+      {
+        "name": "isUnd",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "stringStartsWith",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "DOMTarget",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/planets/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "src/core/render.js": {
+    "definitions": [
+      "render",
+      "tick"
+    ],
+    "references": [
+      {
+        "name": "globals",
+        "source": "./globals.js"
+      },
+      {
+        "name": "tweenTypes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "valueTypes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "tickModes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "compositionTypes",
+        "source": "./consts.js"
+      },
+      {
+        "name": "emptyString",
+        "source": "./consts.js"
+      },
+      {
+        "name": "transformsFragmentStrings",
+        "source": "./consts.js"
+      },
+      {
+        "name": "transformsSymbol",
+        "source": "./consts.js"
+      },
+      {
+        "name": "minValue",
+        "source": "./consts.js"
+      },
+      {
+        "name": "now",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "clamp",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "round",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "lerp",
+        "source": "./helpers.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "./helpers.js"
+      }
+    ]
+  },
+  "tests/suites/controls.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildAtIndex",
+        "source": "../utils.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "../utils.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimer",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "minValue",
+        "source": "../../dist/modules/core/consts.js"
+      }
+    ]
+  },
+  "src/core/helpers.js": {
+    "definitions": [
+      "toLowerCase",
+      "stringStartsWith",
+      "now",
+      "isArr",
+      "isObj",
+      "isNum",
+      "isStr",
+      "isFnc",
+      "isUnd",
+      "isNil",
+      "isSvg",
+      "isHex",
+      "isRgb",
+      "isHsl",
+      "isCol",
+      "isKey",
+      "isValidSVGAttribute",
+      "parseNumber",
+      "pow",
+      "sqrt",
+      "sin",
+      "cos",
+      "abs",
+      "exp",
+      "ceil",
+      "floor",
+      "asin",
+      "max",
+      "atan2",
+      "PI",
+      "_round",
+      "clamp",
+      "round",
+      "snap",
+      "lerp",
+      "clampInfinity",
+      "normalizeTime",
+      "cloneArray",
+      "mergeObjects",
+      "forEachChildren",
+      "removeChild",
+      "addChild"
+    ],
+    "references": [
+      {
+        "name": "isBrowser",
+        "source": "./consts.js"
+      },
+      {
+        "name": "validRgbHslRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "lowerCaseRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "hexTestRgx",
+        "source": "./consts.js"
+      },
+      {
+        "name": "maxValue",
+        "source": "./consts.js"
+      },
+      {
+        "name": "minValue",
+        "source": "./consts.js"
+      },
+      {
+        "name": "globals",
+        "source": "./globals.js"
+      },
+      {
+        "name": "Target",
+        "source": "../types/index.js"
+      },
+      {
+        "name": "DOMTarget",
+        "source": "../types/index.js"
+      }
+    ]
+  },
+  "src/timeline/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "*",
+        "source": "./timeline.js"
+      }
+    ]
+  },
+  "src/index.js": {
+    "definitions": [
+      "easings",
+      "utils",
+      "svg",
+      "text"
+    ],
+    "references": [
+      {
+        "name": "*",
+        "source": "./timer/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./animation/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./timeline/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./animatable/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./draggable/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./scope/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./events/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./engine/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./easings/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./layout/index.js"
+      },
+      {
+        "name": "easings",
+        "source": "./easings/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./utils/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "./utils/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./svg/index.js"
+      },
+      {
+        "name": "svg",
+        "source": "./svg/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./text/index.js"
+      },
+      {
+        "name": "text",
+        "source": "./text/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./waapi/index.js"
+      },
+      {
+        "name": "*",
+        "source": "./types/index.js"
+      }
+    ]
+  },
+  "tests/playground/onscroll/assets/debug.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "utils",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/animejs-v4-logo-animation/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "svg",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "cubicBezier",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "eases",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "tests/run.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "*",
+        "source": "./suites/engine.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/seconds.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/build.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/draggables.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/scroll.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/waapi.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/scope.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/targets.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/animations.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/keyframes.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/tweens.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/timelines.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/timings.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/animatables.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/callbacks.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/controls.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/directions.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/function-based-values.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/parameters.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/promises.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/stagger.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/svg.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/text.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/units.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/utils.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/values.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/colors.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/eases.test.js"
+      },
+      {
+        "name": "*",
+        "source": "./suites/leaks.test.js"
+      }
+    ]
+  },
+  "src/easings/irregular/index.js": {
+    "definitions": [
+      "irregular"
+    ],
+    "references": [
+      {
+        "name": "clamp",
+        "source": "../../core/helpers.js"
+      },
+      {
+        "name": "linear",
+        "source": "../linear/index.js"
+      },
+      {
+        "name": "EasingFunction",
+        "source": "../../types/index.js"
+      }
+    ]
+  },
+  "src/scope/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "*",
+        "source": "./scope.js"
+      }
+    ]
+  },
+  "examples/clock-playback-controls/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "cubicBezier",
+        "source": "../../dist/modules/index.js"
+      }
+    ]
+  },
+  "tests/playground/waapi/eases/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "waapi",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "createSpring",
+        "source": "../../../../dist/modules/index.js"
+      },
+      {
+        "name": "utils",
+        "source": "../../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "examples/auto-layout/onscroll/index.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "createLayout",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "$",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "stagger",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "random",
+        "source": "../../../dist/modules/index.js"
+      },
+      {
+        "name": "onScroll",
+        "source": "../../../dist/modules/index.js"
+      }
+    ]
+  },
+  "tests/suites/utils.test.js": {
+    "definitions": [],
+    "references": [
+      {
+        "name": "utils",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "animate",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "createTimeline",
+        "source": "../../dist/modules/index.js"
+      },
+      {
+        "name": "expect",
+        "source": "../utils.js"
+      },
+      {
+        "name": "addChild",
+        "source": "../utils.js"
+      },
+      {
+        "name": "removeChild",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildAtIndex",
+        "source": "../utils.js"
+      },
+      {
+        "name": "getChildLength",
+        "source": "../utils.js"
+      },
+      {
+        "name": "testObject",
+        "source": "../setup.js"
+      },
+      {
+        "name": "anOtherTestObject",
+        "source": "../setup.js"
+      }
+    ]
+  },
+  "src/animation/animation.js": {
+    "definitions": [
+      "JSAnimation"
+    ],
+    "references": [
+      {
+        "name": "K",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "minValue",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "tweenTypes",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "valueTypes",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "compositionTypes",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "isDomSymbol",
+        "source": "../core/consts.js"
+      },
+      {
+        "name": "mergeObjects",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "cloneArray",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isArr",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isObj",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isUnd",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isKey",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "addChild",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "forEachChildren",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "clampInfinity",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "normalizeTime",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isNum",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "round",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isNil",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isFnc",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "isStr",
+        "source": "../core/helpers.js"
+      },
+      {
+        "name": "globals",
+        "source": "../core/globals.js"
+      },
+      {
+        "name": "registerTargets",
+        "source": "../core/targets.js"
+      },
+      {
+        "name": "getRelativeValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "getFunctionValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "getOriginalAnimatableValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "getTweenType",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "setValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "decomposeRawValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "decomposeTweenValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "decomposedOriginalValue",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "createDecomposedValueTargetObject",
+        "source": "../core/values.js"
+      },
+      {
+        "name": "sanitizePropertyName",
+        "source": "../core/styles.js"
+      },
+      {
+        "name": "cleanInlineStyles",
+        "source": "../core/styles.js"
+      },
+      {
+        "name": "convertValueUnit",
+        "source": "../core/units.js"
+      },
+      {
+        "name": "parseEase",
+        "source": "../easings/eases/parser.js"
+      },
+      {
+        "name": "Timer",
+        "source": "../timer/timer.js"
+      },
+      {
+        "name": "composeTween",
+        "source": "./composition.js"
+      },
+      {
+        "name": "getTweenSiblings",
+        "source": "./composition.js"
+      },
+      {
+        "name": "overrideTween",
+        "source": "./composition.js"
+      },
+      {
+        "name": "additive",
+        "source": "./additive.js"
+      }
+    ]
+  }
+}

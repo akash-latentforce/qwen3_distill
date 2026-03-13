@@ -1,0 +1,760 @@
+{
+  "checkmate/management/commands/watch.py": {
+    "imports": [
+      {
+        "module": ".base",
+        "names": [
+          "BaseCommand"
+        ]
+      },
+      {
+        "module": "checkmate.lib.code",
+        "names": [
+          "CodeEnvironment"
+        ]
+      },
+      {
+        "module": ".analze",
+        "names": [
+          "Command"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/lib/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/test/helpers.py": {
+    "imports": [
+      {
+        "module": "checkmate.management.commands.init",
+        "names": [
+          "Command"
+        ]
+      },
+      {
+        "module": "checkmate.management.helpers",
+        "names": [
+          "get_project_and_backend"
+        ]
+      },
+      {
+        "module": "checkmate.settings",
+        "names": [
+          "Settings"
+        ]
+      }
+    ],
+    "definitions": [
+      "ProjectBasedTest"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/python/metrics/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/javascript/jshint/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/github/commands/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/test/__init__.py": {
+    "imports": [],
+    "definitions": [
+      "TEST_DIRECTORY",
+      "DATA_DIRECTORY",
+      "GIT_TEST_REPOSITORY"
+    ],
+    "references": []
+  },
+  "checkmate/test/settings/test_checkignore.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/hooks/project.py": {
+    "imports": [
+      {
+        "module": "..models",
+        "names": [
+          "GitSnapshot",
+          "GitBranch"
+        ]
+      }
+    ],
+    "definitions": [
+      "before_project_save",
+      "before_project_reset"
+    ],
+    "references": []
+  },
+  "checkmate/migrations/env.py": {
+    "imports": [
+      {
+        "module": "blitzdb.backends.sql",
+        "names": [
+          "Backend"
+        ]
+      },
+      {
+        "module": "checkmate.management.helpers",
+        "names": [
+          "get_project_config",
+          "get_backend",
+          "get_project_path"
+        ]
+      }
+    ],
+    "definitions": [
+      "run_migrations_offline",
+      "run_migrations_online"
+    ],
+    "references": []
+  },
+  "checkmate/management/commands/compare.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/commands/update_stats.py": {
+    "imports": [
+      {
+        "module": "checkmate.management.commands.base",
+        "names": [
+          "BaseCommand"
+        ]
+      },
+      {
+        "module": "..models",
+        "names": [
+          "GitBranch"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/management/commands/shell.py": {
+    "imports": [
+      {
+        "module": ".base",
+        "names": [
+          "BaseCommand"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/lib/analysis/__init__.py": {
+    "imports": [
+      {
+        "module": ".base",
+        "names": [
+          "*"
+        ]
+      }
+    ],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "docs/_themes/flask_theme_support.py": {
+    "imports": [],
+    "definitions": [
+      "FlaskyStyle"
+    ],
+    "references": []
+  },
+  "checkmate/settings/base.py": {
+    "imports": [
+      {
+        "module": ".",
+        "names": [
+          "defaults"
+        ]
+      }
+    ],
+    "definitions": [
+      "update_recursively",
+      "Settings"
+    ],
+    "references": [
+      {
+        "module": ".defaults",
+        "names": [
+          "plugins",
+          "hooks",
+          "commands",
+          "analyzers",
+          "aggregators",
+          "models",
+          "language_patterns"
+        ]
+      }
+    ]
+  },
+  "checkmate/contrib/plugins/github/models.py": {
+    "imports": [
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "BaseDocument"
+        ]
+      }
+    ],
+    "definitions": [
+      "logger",
+      "Github"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/github/commands/analyze_pull_requests.py": {
+    "imports": [
+      {
+        "module": "checkmate.management.commands.analyze",
+        "names": [
+          "Command"
+        ]
+      },
+      {
+        "module": "..models",
+        "names": [
+          "GithubProject"
+        ]
+      },
+      {
+        "module": "checkmate.lib.code",
+        "names": [
+          "CodeEnvironment"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/management/commands/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/management/commands/stats.py": {
+    "imports": [
+      {
+        "module": ".base",
+        "names": [
+          "BaseCommand"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/migrations/versions/14361ae029cf_initial_db_layout.py": {
+    "imports": [],
+    "definitions": [
+      "revision",
+      "down_revision",
+      "branch_labels",
+      "depends_on",
+      "upgrade"
+    ],
+    "references": [
+      {
+        "module": "alembic",
+        "names": [
+          "op"
+        ]
+      },
+      {
+        "module": "sqlalchemy",
+        "names": [
+          "Column",
+          "LargeBinary",
+          "VARCHAR",
+          "DateTime",
+          "PrimaryKeyConstraint",
+          "UniqueConstraint",
+          "Integer",
+          "Text",
+          "ForeignKeyConstraint",
+          "Enum",
+          "Boolean"
+        ]
+      }
+    ]
+  },
+  "checkmate/management/commands/info.py": {
+    "imports": [
+      {
+        "module": "checkmate.models",
+        "names": [
+          "Check",
+          "CheckRun",
+          "CheckResult"
+        ]
+      },
+      {
+        "module": "checkmate.utils",
+        "names": [
+          "get_check_stats"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/test/lib/test_repository.py": {
+    "imports": [
+      {
+        "module": "...lib.repository",
+        "names": [
+          "Repository"
+        ]
+      },
+      {
+        "module": "..helpers",
+        "names": [
+          "RepositoryBasedTest"
+        ]
+      }
+    ],
+    "definitions": [
+      "TestRepository"
+    ],
+    "references": []
+  },
+  "checkmate/settings/defaults.py": {
+    "imports": [
+      {
+        "module": "checkmate.lib.stats.helpers",
+        "names": [
+          "directory_splitter"
+        ]
+      },
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "Project",
+          "Snapshot",
+          "DiskSnapshot",
+          "FileRevision",
+          "Issue"
+        ]
+      }
+    ],
+    "definitions": [
+      "hooks",
+      "plugins",
+      "language_patterns",
+      "analyzers",
+      "commands",
+      "models",
+      "aggregators",
+      "checkignore"
+    ],
+    "references": []
+  },
+  "checkmate/lib/models.py": {
+    "imports": [
+      {
+        "module": "checkmate.helpers.hashing",
+        "names": [
+          "Hasher"
+        ]
+      },
+      {
+        "module": "checkmate.lib.stats.helpers",
+        "names": [
+          "directory_splitter"
+        ]
+      },
+      {
+        "module": "checkmate.lib.analysis",
+        "names": [
+          "AnalyzerSettingsError"
+        ]
+      },
+      {
+        "module": "checkmate.helpers.issue",
+        "names": [
+          "IssuesMapReducer"
+        ]
+      }
+    ],
+    "definitions": [
+      "logger",
+      "BaseDocument",
+      "IssueCategory",
+      "IssueClass",
+      "IssueOccurrence",
+      "Issue",
+      "MockFileRevision",
+      "FileRevision",
+      "Diff",
+      "DiffIssueOccurrence",
+      "DiffFileRevision",
+      "Snapshot"
+    ],
+    "references": []
+  },
+  "checkmate/test/diff/test_object_diffing.py": {
+    "imports": [
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "Diff",
+          "DiffFileRevision",
+          "Issue",
+          "IssueOccurrence",
+          "FileRevision",
+          "Snapshot",
+          "DiffIssueOccurrence"
+        ]
+      },
+      {
+        "module": "checkmate.lib.code.environment",
+        "names": [
+          "diff_objects",
+          "file_revision_key",
+          "file_revision_comparator",
+          "issue_occurrence_key",
+          "issue_occurrence_comparator"
+        ]
+      }
+    ],
+    "definitions": [
+      "TestObjectDiffing"
+    ],
+    "references": []
+  },
+  "checkmate/lib/code/environment.py": {
+    "imports": [
+      {
+        "module": "checkmate.helpers.issue",
+        "names": [
+          "group_issues_by_fingerprint"
+        ]
+      },
+      {
+        "module": "checkmate.management.helpers",
+        "names": [
+          "filter_filenames_by_analyzers",
+          "filter_filenames_by_checkignore"
+        ]
+      },
+      {
+        "module": "checkmate.helpers.hashing",
+        "names": [
+          "Hasher"
+        ]
+      },
+      {
+        "module": "checkmate.lib.analysis.base",
+        "names": [
+          "BaseAnalyzer"
+        ]
+      },
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "Issue",
+          "IssueOccurrence",
+          "Diff",
+          "Snapshot",
+          "FileRevision",
+          "DiffFileRevision",
+          "DiffIssueOccurrence"
+        ]
+      }
+    ],
+    "definitions": [
+      "AnalysisTimeAnalyzer",
+      "apply_filter",
+      "diff_objects",
+      "file_revision_key",
+      "file_revision_comparator",
+      "issue_occurrence_key",
+      "issue_occurrence_comparator",
+      "CodeEnvironment"
+    ],
+    "references": []
+  },
+  "checkmate/test/settings/test_analyzers.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/test/analysis/test_analysis.py": {
+    "imports": [
+      {
+        "module": "..helpers",
+        "names": [
+          "RepositoryBasedTest"
+        ]
+      },
+      {
+        "module": "checkmate.contrib.plugins.git.commands.analyze",
+        "names": [
+          "Command"
+        ]
+      },
+      {
+        "module": "checkmate.contrib.plugins.git.models",
+        "names": [
+          "GitSnapshot",
+          "GitBranch"
+        ]
+      },
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "Issue",
+          "IssueOccurrence"
+        ]
+      },
+      {
+        "module": "checkmate.lib.analysis",
+        "names": [
+          "BaseAnalyzer"
+        ]
+      }
+    ],
+    "definitions": [
+      "TestProjectAnalysis"
+    ],
+    "references": []
+  },
+  "checkmate/scripts/manage.py": {
+    "imports": [
+      {
+        "module": "checkmate",
+        "names": []
+      },
+      {
+        "module": "checkmate.management",
+        "names": [
+          "helpers",
+          "commands"
+        ]
+      },
+      {
+        "module": "checkmate.management.helpers",
+        "names": [
+          "get_project_path",
+          "get_project",
+          "get_backend",
+          "get_project_config"
+        ]
+      },
+      {
+        "module": "checkmate.settings",
+        "names": [
+          "Settings"
+        ]
+      }
+    ],
+    "definitions": [
+      "load_command_class",
+      "main"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/python/pyflakes/issues_data.py": {
+    "imports": [],
+    "definitions": [
+      "issues_data"
+    ],
+    "references": []
+  },
+  "checkmate/management/commands/reset.py": {
+    "imports": [
+      {
+        "module": ".base",
+        "names": [
+          "BaseCommand"
+        ]
+      },
+      {
+        "module": "checkmate.lib.models",
+        "names": [
+          "Snapshot",
+          "FileRevision",
+          "Issue",
+          "IssueOccurrence",
+          "Diff",
+          "DiffIssueOccurrence",
+          "DiffFileRevision"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/test/analysis/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/management/commands/props/set.py": {
+    "imports": [
+      {
+        "module": "checkmate.management.commands.base",
+        "names": [
+          "BaseCommand"
+        ]
+      },
+      {
+        "module": "checkmate.management.helpers",
+        "names": [
+          "save_project_config"
+        ]
+      }
+    ],
+    "definitions": [
+      "Command"
+    ],
+    "references": []
+  },
+  "checkmate/management/commands/export.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/test/diff/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/test/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/helpers/facts.py": {
+    "imports": [],
+    "definitions": [
+      "Facts"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/commands/__init__.py": {
+    "imports": [
+      {
+        "module": ".init",
+        "names": [
+          "InitCommand"
+        ]
+      },
+      {
+        "module": ".analyze",
+        "names": [
+          "AnalyzeCommand"
+        ]
+      },
+      {
+        "module": ".diff",
+        "names": [
+          "DiffCommand"
+        ]
+      },
+      {
+        "module": ".update_stats",
+        "names": [
+          "UpdateStatsCommand"
+        ]
+      }
+    ],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/test/git/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/management/commands/trend.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/management/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/python/pep8/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/git/lib/repository_pygit2.py": {
+    "imports": [],
+    "definitions": [
+      "logger",
+      "GitException",
+      "get_first_date_for_group",
+      "group_snapshots_by_date",
+      "Repository"
+    ],
+    "references": []
+  },
+  "checkmate/helpers/settings.py": {
+    "imports": [],
+    "definitions": [
+      "update"
+    ],
+    "references": []
+  },
+  "checkmate/contrib/__init__.py": {
+    "imports": [],
+    "definitions": [],
+    "references": []
+  },
+  "checkmate/contrib/plugins/python/pylint/issues_data.py": {
+    "imports": [],
+    "definitions": [
+      "issues_data"
+    ],
+    "references": []
+  }
+}

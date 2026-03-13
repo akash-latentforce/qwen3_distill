@@ -1,0 +1,1092 @@
+{
+  "langchain4j-anthropic/src/test/java/dev/langchain4j/model/anthropic/common/AnthropicAiServiceWithJsonSchemaIT.java": {
+    "package": "dev.langchain4j.model.anthropic.common",
+    "definitions": [
+      "AnthropicAiServiceWithJsonSchemaIT"
+    ],
+    "imports": [
+      "dev.langchain4j.model.anthropic.AnthropicChatModel",
+      "dev.langchain4j.model.anthropic.AnthropicChatModelName",
+      "dev.langchain4j.model.chat.ChatModel",
+      "dev.langchain4j.service.common.AbstractAiServiceWithJsonSchemaIT"
+    ],
+    "used_classes": [
+      "AbstractAiServiceWithJsonSchemaIT",
+      "ChatModel",
+      "AnthropicChatModel",
+      "AnthropicChatModelName"
+    ],
+    "static_imports": [
+      "dev.langchain4j.model.chat.Capability"
+    ]
+  },
+  "experimental/langchain4j-experimental-skills-shell/src/main/java/dev/langchain4j/skills/shell/ShellSkills.java": {
+    "package": "dev.langchain4j.skills.shell",
+    "definitions": [
+      "ShellSkills",
+      "Builder"
+    ],
+    "imports": [
+      "dev.langchain4j.Experimental",
+      "dev.langchain4j.agent.tool.ToolSpecification",
+      "dev.langchain4j.model.chat.request.json.JsonObjectSchema",
+      "dev.langchain4j.service.tool.ToolExecutor",
+      "dev.langchain4j.service.tool.ToolProvider",
+      "dev.langchain4j.service.tool.ToolProviderResult",
+      "dev.langchain4j.skills.FileSystemSkill"
+    ],
+    "used_classes": [
+      "Experimental",
+      "ToolSpecification",
+      "JsonObjectSchema",
+      "ToolExecutor",
+      "ToolProvider",
+      "ToolProviderResult",
+      "FileSystemSkill",
+      "RunShellCommandToolConfig",
+      "RunShellCommandToolExecutor"
+    ],
+    "static_imports": [
+      "dev.langchain4j.agent.tool.SearchBehavior",
+      "dev.langchain4j.agent.tool.ToolSpecification",
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-core/src/test/java/dev/langchain4j/store/embedding/filter/comparison/IsNotEqualToTest.java": {
+    "package": "dev.langchain4j.store.embedding.filter.comparison",
+    "definitions": [
+      "IsNotEqualToTest"
+    ],
+    "imports": [
+      "dev.langchain4j.data.document.Metadata"
+    ],
+    "used_classes": [
+      "IsNotEqualTo",
+      "Metadata"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/test/java/dev/langchain4j/data/message/ToolExecutionResultMessageTest.java": {
+    "package": "dev.langchain4j.data.message",
+    "definitions": [
+      "ToolExecutionResultMessageTest"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolExecutionRequest"
+    ],
+    "used_classes": [
+      "ToolExecutionResultMessage",
+      "ChatMessageType",
+      "ToolExecutionRequest"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/rag/query/Metadata.java": {
+    "package": "dev.langchain4j.rag.query",
+    "definitions": [
+      "Metadata",
+      "Builder"
+    ],
+    "imports": [
+      "dev.langchain4j.data.message.ChatMessage",
+      "dev.langchain4j.data.message.SystemMessage",
+      "dev.langchain4j.invocation.InvocationContext",
+      "dev.langchain4j.invocation.InvocationParameters",
+      "dev.langchain4j.memory.ChatMemory",
+      "dev.langchain4j.rag.AugmentationRequest",
+      "dev.langchain4j.rag.RetrievalAugmentor"
+    ],
+    "used_classes": [
+      "ChatMessage",
+      "SystemMessage",
+      "InvocationContext",
+      "InvocationParameters",
+      "ChatMemory",
+      "RetrievalAugmentor",
+      "AugmentationRequest",
+      "Query"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-bedrock/src/main/java/dev/langchain4j/model/bedrock/BedrockSystemContent.java": {
+    "package": "dev.langchain4j.model.bedrock",
+    "definitions": [
+      "BedrockSystemContent"
+    ],
+    "imports": [],
+    "used_classes": [
+      "BedrockSystemTextContent",
+      "BedrockSystemContentType"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-anthropic/src/main/java/dev/langchain4j/model/anthropic/internal/api/AnthropicPdfContent.java": {
+    "package": "dev.langchain4j.model.anthropic.internal.api",
+    "definitions": [
+      "AnthropicPdfContent"
+    ],
+    "imports": [],
+    "used_classes": [
+      "AnthropicMessageContent",
+      "AnthropicPdfContentSource"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-voyage-ai/src/main/java/dev/langchain4j/model/voyageai/TokenUsage.java": {
+    "package": "dev.langchain4j.model.voyageai",
+    "definitions": [
+      "TokenUsage"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "langchain4j-agentic/src/main/java/dev/langchain4j/agentic/workflow/impl/ParallelPlanner.java": {
+    "package": "dev.langchain4j.agentic.workflow.impl",
+    "definitions": [
+      "ParallelPlanner"
+    ],
+    "imports": [
+      "dev.langchain4j.agentic.planner.Action",
+      "dev.langchain4j.agentic.planner.AgentInstance",
+      "dev.langchain4j.agentic.planner.AgenticSystemTopology",
+      "dev.langchain4j.agentic.planner.InitPlanningContext",
+      "dev.langchain4j.agentic.planner.PlanningContext",
+      "dev.langchain4j.agentic.planner.Planner"
+    ],
+    "used_classes": [
+      "Planner",
+      "AgentInstance",
+      "InitPlanningContext",
+      "PlanningContext",
+      "Action",
+      "AgenticSystemTopology"
+    ],
+    "static_imports": []
+  },
+  "langchain4j/src/main/java/dev/langchain4j/service/tool/ToolProviderRequest.java": {
+    "package": "dev.langchain4j.service.tool",
+    "definitions": [
+      "ToolProviderRequest",
+      "Builder"
+    ],
+    "imports": [
+      "dev.langchain4j.invocation.InvocationContext",
+      "dev.langchain4j.data.message.UserMessage",
+      "dev.langchain4j.invocation.InvocationParameters"
+    ],
+    "used_classes": [
+      "InvocationContext",
+      "UserMessage",
+      "InvocationParameters"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-mistral-ai/src/test/java/dev/langchain4j/model/mistralai/common/MistralAiStreamingChatModelIT.java": {
+    "package": "dev.langchain4j.model.mistralai.common",
+    "definitions": [
+      "MistralAiStreamingChatModelIT"
+    ],
+    "imports": [
+      "dev.langchain4j.model.chat.StreamingChatModel",
+      "dev.langchain4j.model.chat.common.AbstractStreamingChatModelIT",
+      "dev.langchain4j.model.chat.listener.ChatModelListener",
+      "dev.langchain4j.model.chat.request.ChatRequestParameters",
+      "dev.langchain4j.model.chat.response.ChatResponseMetadata",
+      "dev.langchain4j.model.chat.response.StreamingChatResponseHandler",
+      "dev.langchain4j.model.mistralai.MistralAiChatResponseMetadata",
+      "dev.langchain4j.model.mistralai.MistralAiStreamingChatModel"
+    ],
+    "used_classes": [
+      "StreamingChatModel",
+      "AbstractStreamingChatModelIT",
+      "ChatModelListener",
+      "ChatRequestParameters",
+      "ChatResponseMetadata",
+      "StreamingChatResponseHandler",
+      "MistralAiChatResponseMetadata",
+      "MistralAiStreamingChatModel",
+      "InOrder"
+    ],
+    "static_imports": [
+      "dev.langchain4j.model.mistralai.MistralAiChatModelName"
+    ]
+  },
+  "integration-tests/integration-tests-class-instance-loader/integration-tests-class-instance-loader-spring/src/main/java/com/example/ApplicationContextProvider.java": {
+    "package": "com.example",
+    "definitions": [
+      "ApplicationContextProvider"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "http-clients/langchain4j-http-client-jdk/src/test/java/dev/langchain4j/http/client/jdk/MultipartBodyPublisherTest.java": {
+    "package": "dev.langchain4j.http.client.jdk",
+    "definitions": [
+      "MultipartBodyPublisherTest"
+    ],
+    "imports": [
+      "dev.langchain4j.http.client.FormDataFile"
+    ],
+    "used_classes": [
+      "MultipartBodyPublisher",
+      "FormDataFile"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-agentic/src/test/java/dev/langchain4j/agentic/carrentalassistant/services/FireAgentService.java": {
+    "package": "dev.langchain4j.agentic.carrentalassistant.services",
+    "definitions": [
+      "FireAgentService"
+    ],
+    "imports": [
+      "dev.langchain4j.agentic.Agent",
+      "dev.langchain4j.agentic.carrentalassistant.domain.CustomerInfo",
+      "dev.langchain4j.service.MemoryId",
+      "dev.langchain4j.service.SystemMessage",
+      "dev.langchain4j.service.UserMessage",
+      "dev.langchain4j.service.V"
+    ],
+    "used_classes": [
+      "Agent",
+      "CustomerInfo",
+      "MemoryId",
+      "SystemMessage",
+      "UserMessage",
+      "V"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/rag/RetrievalAugmentor.java": {
+    "package": "dev.langchain4j.rag",
+    "definitions": [
+      "RetrievalAugmentor"
+    ],
+    "imports": [
+      "dev.langchain4j.data.message.ChatMessage",
+      "dev.langchain4j.rag.content.Content"
+    ],
+    "used_classes": [
+      "ChatMessage",
+      "Content",
+      "DefaultRetrievalAugmentor",
+      "AugmentationRequest",
+      "AugmentationResult"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/store/embedding/filter/comparison/ContainsString.java": {
+    "package": "dev.langchain4j.store.embedding.filter.comparison",
+    "definitions": [
+      "ContainsString"
+    ],
+    "imports": [
+      "dev.langchain4j.data.document.Metadata",
+      "dev.langchain4j.store.embedding.filter.Filter"
+    ],
+    "used_classes": [
+      "Filter",
+      "Metadata"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.Exceptions",
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-pgvector/src/main/java/dev/langchain4j/store/embedding/pgvector/ColumnFilterMapper.java": {
+    "package": "dev.langchain4j.store.embedding.pgvector",
+    "definitions": [
+      "ColumnFilterMapper"
+    ],
+    "imports": [],
+    "used_classes": [
+      "PgVectorFilterMapper"
+    ],
+    "static_imports": []
+  },
+  "langchain4j/src/test/java/dev/langchain4j/service/AbstractAiServicesWithToolErrorHandlerTest.java": {
+    "package": "dev.langchain4j.service",
+    "definitions": [
+      "AbstractAiServicesWithToolErrorHandlerTest",
+      "Assistant"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolExecutionRequest",
+      "dev.langchain4j.data.message.AiMessage",
+      "dev.langchain4j.data.message.ToolExecutionResultMessage",
+      "dev.langchain4j.model.chat.ChatModel",
+      "dev.langchain4j.model.chat.mock.ChatModelMock",
+      "dev.langchain4j.model.chat.request.ChatRequest",
+      "dev.langchain4j.service.tool.ToolArgumentsErrorHandler",
+      "dev.langchain4j.service.tool.ToolErrorHandlerResult",
+      "dev.langchain4j.service.tool.ToolExecutionErrorHandler"
+    ],
+    "used_classes": [
+      "AiServices",
+      "ToolExecutionRequest",
+      "AiMessage",
+      "ToolExecutionResultMessage",
+      "ChatModel",
+      "ChatModelMock",
+      "ChatRequest",
+      "ToolArgumentsErrorHandler",
+      "ToolErrorHandlerResult",
+      "ToolExecutionErrorHandler",
+      "CustomToolException"
+    ],
+    "static_imports": []
+  },
+  "experimental/langchain4j-experimental-sql/src/test/java/dev/langchain4j/experimental/rag/content/retriever/sql/SqlDatabaseContentRetrieverIT.java": {
+    "package": "dev.langchain4j.experimental.rag.content.retriever.sql",
+    "definitions": [
+      "SqlDatabaseContentRetrieverIT"
+    ],
+    "imports": [
+      "dev.langchain4j.model.chat.ChatModel",
+      "dev.langchain4j.model.mistralai.MistralAiChatModel",
+      "dev.langchain4j.model.openai.OpenAiChatModel",
+      "dev.langchain4j.rag.content.Content",
+      "dev.langchain4j.rag.content.retriever.ContentRetriever",
+      "dev.langchain4j.rag.query.Query",
+      "org.postgresql.ds.PGSimpleDataSource",
+      "org.testcontainers.containers.PostgreSQLContainer",
+      "org.testcontainers.junit.jupiter.Container",
+      "org.testcontainers.junit.jupiter.Testcontainers",
+      "org.testcontainers.utility.DockerImageName"
+    ],
+    "used_classes": [
+      "ChatModel",
+      "MistralAiChatModel",
+      "OpenAiChatModel",
+      "Content",
+      "ContentRetriever",
+      "Query",
+      "PGSimpleDataSource",
+      "PostgreSQLContainer",
+      "DockerImageName",
+      "SqlDatabaseContentRetriever"
+    ],
+    "static_imports": [
+      "dev.langchain4j.model.mistralai.MistralAiChatModelName",
+      "dev.langchain4j.model.openai.OpenAiChatModelName"
+    ]
+  },
+  "langchain4j-workers-ai/src/main/java/dev/langchain4j/model/workersai/client/WorkersAiClient.java": {
+    "package": "dev.langchain4j.model.workersai.client",
+    "definitions": [
+      "WorkersAiClient",
+      "AuthInterceptor"
+    ],
+    "imports": [],
+    "used_classes": [
+      "WorkersAiApi"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/model/chat/response/ChatResponseMetadata.java": {
+    "package": "dev.langchain4j.model.chat.response",
+    "definitions": [
+      "ChatResponseMetadata",
+      "Builder"
+    ],
+    "imports": [
+      "dev.langchain4j.internal.JacocoIgnoreCoverageGenerated",
+      "dev.langchain4j.model.output.FinishReason",
+      "dev.langchain4j.model.output.TokenUsage"
+    ],
+    "used_classes": [
+      "JacocoIgnoreCoverageGenerated",
+      "FinishReason",
+      "TokenUsage"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-voyage-ai/src/main/java/dev/langchain4j/model/voyageai/RerankResponse.java": {
+    "package": "dev.langchain4j.model.voyageai",
+    "definitions": [
+      "RerankResponse",
+      "RerankData"
+    ],
+    "imports": [],
+    "used_classes": [
+      "TokenUsage"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-mistral-ai/src/test/java/dev/langchain4j/model/mistralai/MistralAiStreamingChatModelReturnThinkingTest.java": {
+    "package": "dev.langchain4j.model.mistralai",
+    "definitions": [
+      "MistralAiStreamingChatModelReturnThinkingTest"
+    ],
+    "imports": [
+      "dev.langchain4j.data.message.AiMessage",
+      "dev.langchain4j.http.client.MockHttpClient",
+      "dev.langchain4j.http.client.MockHttpClientBuilder",
+      "dev.langchain4j.http.client.sse.ServerSentEvent",
+      "dev.langchain4j.model.chat.StreamingChatModel",
+      "dev.langchain4j.model.chat.TestStreamingChatResponseHandler",
+      "dev.langchain4j.model.chat.response.ChatResponse"
+    ],
+    "used_classes": [
+      "AiMessage",
+      "MockHttpClient",
+      "MockHttpClientBuilder",
+      "ServerSentEvent",
+      "StreamingChatModel",
+      "TestStreamingChatResponseHandler",
+      "ChatResponse",
+      "MistralAiStreamingChatModel"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/rag/content/aggregator/ReciprocalRankFuser.java": {
+    "package": "dev.langchain4j.rag.content.aggregator",
+    "definitions": [
+      "ReciprocalRankFuser"
+    ],
+    "imports": [
+      "dev.langchain4j.rag.content.Content"
+    ],
+    "used_classes": [
+      "Content"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-open-ai-official/src/main/java/dev/langchain4j/model/openaiofficial/OpenAiOfficialEmbeddingModel.java": {
+    "package": "dev.langchain4j.model.openaiofficial",
+    "definitions": [
+      "OpenAiOfficialEmbeddingModel",
+      "Builder"
+    ],
+    "imports": [
+      "com.openai.azure.AzureOpenAIServiceVersion",
+      "com.openai.client.OpenAIClient",
+      "com.openai.credential.Credential",
+      "com.openai.models.embeddings.CreateEmbeddingResponse",
+      "com.openai.models.embeddings.EmbeddingCreateParams",
+      "com.openai.models.embeddings.EmbeddingModel",
+      "dev.langchain4j.data.embedding.Embedding",
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.model.embedding.DimensionAwareEmbeddingModel",
+      "dev.langchain4j.model.output.Response",
+      "dev.langchain4j.model.output.TokenUsage"
+    ],
+    "used_classes": [
+      "AzureOpenAIServiceVersion",
+      "OpenAIClient",
+      "Credential",
+      "CreateEmbeddingResponse",
+      "EmbeddingCreateParams",
+      "EmbeddingModel",
+      "Embedding",
+      "TextSegment",
+      "DimensionAwareEmbeddingModel",
+      "Response",
+      "TokenUsage",
+      "OpenAiOfficialEmbeddingModelName"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.internal.ValidationUtils",
+      "dev.langchain4j.model.openaiofficial.InternalOpenAiOfficialHelper",
+      "dev.langchain4j.model.openaiofficial.setup.OpenAiOfficialSetup"
+    ]
+  },
+  "langchain4j/src/main/java/dev/langchain4j/service/tool/ToolExecutionErrorHandler.java": {
+    "package": "dev.langchain4j.service.tool",
+    "definitions": [
+      "ToolExecutionErrorHandler"
+    ],
+    "imports": [
+      "dev.langchain4j.exception.ToolExecutionException",
+      "dev.langchain4j.service.AiServices"
+    ],
+    "used_classes": [
+      "ToolErrorHandlerResult",
+      "ToolErrorContext"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-couchbase/src/main/java/dev/langchain4j/store/embedding/couchbase/Document.java": {
+    "package": "dev.langchain4j.store.embedding.couchbase",
+    "definitions": [
+      "Document",
+      "DocumentBuilder"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "document-loaders/langchain4j-document-loader-github/src/test/java/dev/langchain4j/data/document/loader/github/GitHubDocumentLoaderIT.java": {
+    "package": "dev.langchain4j.data.document.loader.github",
+    "definitions": [
+      "GitHubDocumentLoaderIT"
+    ],
+    "imports": [
+      "dev.langchain4j.data.document.Document",
+      "dev.langchain4j.data.document.DocumentParser",
+      "dev.langchain4j.data.document.parser.TextDocumentParser",
+      "org.kohsuke.github.GHFileNotFoundException"
+    ],
+    "used_classes": [
+      "GitHubDocumentLoader",
+      "Document",
+      "DocumentParser",
+      "TextDocumentParser",
+      "GHFileNotFoundException"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-cohere/src/test/java/dev/langchain4j/model/cohere/CohereScoringModelIT.java": {
+    "package": "dev.langchain4j.model.cohere",
+    "definitions": [
+      "CohereScoringModelIT"
+    ],
+    "imports": [
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.model.output.Response",
+      "dev.langchain4j.model.scoring.ScoringModel"
+    ],
+    "used_classes": [
+      "ScoringModel",
+      "CohereScoringModel",
+      "Response",
+      "TextSegment"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-mongodb-atlas/src/main/java/dev/langchain4j/store/embedding/mongodb/MappingUtils.java": {
+    "package": "dev.langchain4j.store.embedding.mongodb",
+    "definitions": [
+      "MappingUtils"
+    ],
+    "imports": [
+      "dev.langchain4j.data.document.Metadata",
+      "dev.langchain4j.data.embedding.Embedding",
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.store.embedding.EmbeddingMatch"
+    ],
+    "used_classes": [
+      "Metadata",
+      "Embedding",
+      "TextSegment",
+      "EmbeddingMatch",
+      "Document",
+      "MongoDbDocument",
+      "MongoDbMatchedDocument",
+      "IndexMapping"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-jlama/src/main/java/dev/langchain4j/model/jlama/Json.java": {
+    "package": "dev.langchain4j.model.jlama",
+    "definitions": [
+      "Json"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "langchain4j-couchbase/src/main/java/dev/langchain4j/store/embedding/couchbase/CouchbaseEmbeddingStore.java": {
+    "package": "dev.langchain4j.store.embedding.couchbase",
+    "definitions": [
+      "CouchbaseEmbeddingStore",
+      "Builder"
+    ],
+    "imports": [
+      "com.couchbase.client.java.Bucket",
+      "com.couchbase.client.java.Cluster",
+      "com.couchbase.client.java.manager.search.SearchIndex",
+      "com.couchbase.client.java.search.SearchRequest",
+      "com.couchbase.client.java.search.result.SearchResult",
+      "com.couchbase.client.java.search.vector.VectorQuery",
+      "com.couchbase.client.java.search.vector.VectorSearch",
+      "dev.langchain4j.data.document.Metadata",
+      "dev.langchain4j.data.embedding.Embedding",
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.internal.ValidationUtils",
+      "dev.langchain4j.store.embedding.*"
+    ],
+    "used_classes": [
+      "EmbeddingStore",
+      "TextSegment",
+      "Cluster",
+      "com.couchbase.client.java.Collection",
+      "Bucket",
+      "SearchIndex",
+      "Embedding",
+      "Document",
+      "EmbeddingSearchResult",
+      "EmbeddingSearchRequest",
+      "VectorQuery",
+      "SearchResult",
+      "SearchRequest",
+      "VectorSearch",
+      "EmbeddingMatch",
+      "RelevanceScore",
+      "CosineSimilarity",
+      "Metadata"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.internal.ValidationUtils"
+    ]
+  },
+  "langchain4j-chroma/src/test/java/dev/langchain4j/store/embedding/chroma/ChromaEmbeddingStoreRemovalV2IT.java": {
+    "package": "dev.langchain4j.store.embedding.chroma",
+    "definitions": [
+      "ChromaEmbeddingStoreRemovalV2IT"
+    ],
+    "imports": [
+      "dev.langchain4j.data.document.Metadata",
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.model.embedding.EmbeddingModel",
+      "dev.langchain4j.model.embedding.onnx.allminilml6v2q.AllMiniLmL6V2QuantizedEmbeddingModel",
+      "dev.langchain4j.store.embedding.EmbeddingMatch",
+      "dev.langchain4j.store.embedding.EmbeddingStore",
+      "dev.langchain4j.store.embedding.EmbeddingStoreWithRemovalIT",
+      "org.testcontainers.chromadb.ChromaDBContainer",
+      "org.testcontainers.junit.jupiter.Container",
+      "org.testcontainers.junit.jupiter.Testcontainers"
+    ],
+    "used_classes": [
+      "EmbeddingStoreWithRemovalIT",
+      "ChromaDBContainer",
+      "EmbeddingStore",
+      "TextSegment",
+      "ChromaEmbeddingStore",
+      "ChromaApiVersion",
+      "EmbeddingModel",
+      "AllMiniLmL6V2QuantizedEmbeddingModel",
+      "Metadata",
+      "EmbeddingMatch"
+    ],
+    "static_imports": [
+      "dev.langchain4j.data.document.Metadata",
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.store.embedding.filter.Filter",
+      "dev.langchain4j.store.embedding.filter.MetadataFilterBuilder"
+    ]
+  },
+  "langchain4j-core/src/main/java/dev/langchain4j/observability/api/listener/ToolExecutedEventListener.java": {
+    "package": "dev.langchain4j.observability.api.listener",
+    "definitions": [
+      "ToolExecutedEventListener"
+    ],
+    "imports": [
+      "dev.langchain4j.observability.api.event.ToolExecutedEvent"
+    ],
+    "used_classes": [
+      "AiServiceListener",
+      "ToolExecutedEvent"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-jina/src/main/java/dev/langchain4j/model/jina/internal/api/JinaRerankingResult.java": {
+    "package": "dev.langchain4j.model.jina.internal.api",
+    "definitions": [
+      "JinaRerankingResult"
+    ],
+    "imports": [],
+    "used_classes": [
+      "JinaDocument"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-anthropic/src/main/java/dev/langchain4j/model/anthropic/internal/api/AnthropicOutputFormatType.java": {
+    "package": "dev.langchain4j.model.anthropic.internal.api",
+    "definitions": [
+      "AnthropicOutputFormatType"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "langchain4j-agentic/src/test/java/dev/langchain4j/agentic/carrentalassistant/services/CarRentalAssistant.java": {
+    "package": "dev.langchain4j.agentic.carrentalassistant.services",
+    "definitions": [
+      "CarRentalAssistant"
+    ],
+    "imports": [
+      "dev.langchain4j.agentic.Agent",
+      "dev.langchain4j.agentic.scope.ResultWithAgenticScope",
+      "dev.langchain4j.service.MemoryId",
+      "dev.langchain4j.service.V"
+    ],
+    "used_classes": [
+      "Agent",
+      "ResultWithAgenticScope",
+      "MemoryId",
+      "V"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-mcp/src/test/java/dev/langchain4j/mcp/client/integration/McpHeadersTestBase.java": {
+    "package": "dev.langchain4j.mcp.client.integration",
+    "definitions": [
+      "McpHeadersTestBase",
+      "DummyAiService"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolExecutionRequest",
+      "dev.langchain4j.data.message.AiMessage",
+      "dev.langchain4j.data.message.ToolExecutionResultMessage",
+      "dev.langchain4j.invocation.InvocationContext",
+      "dev.langchain4j.mcp.McpToolProvider",
+      "dev.langchain4j.mcp.client.McpCallContext",
+      "dev.langchain4j.mcp.client.McpClient",
+      "dev.langchain4j.mcp.client.McpHeadersSupplier",
+      "dev.langchain4j.mcp.protocol.McpCallToolRequest",
+      "dev.langchain4j.mcp.protocol.McpInitializationNotification",
+      "dev.langchain4j.mcp.protocol.McpInitializeRequest",
+      "dev.langchain4j.memory.chat.MessageWindowChatMemory",
+      "dev.langchain4j.model.chat.ChatModel",
+      "dev.langchain4j.model.chat.mock.ChatModelMock",
+      "dev.langchain4j.service.AiServices",
+      "dev.langchain4j.service.UserMessage"
+    ],
+    "used_classes": [
+      "ToolExecutionRequest",
+      "AiMessage",
+      "ToolExecutionResultMessage",
+      "InvocationContext",
+      "McpToolProvider",
+      "McpCallContext",
+      "McpClient",
+      "McpHeadersSupplier",
+      "McpCallToolRequest",
+      "McpInitializationNotification",
+      "McpInitializeRequest",
+      "MessageWindowChatMemory",
+      "ChatModel",
+      "ChatModelMock",
+      "AiServices",
+      "UserMessage"
+    ],
+    "static_imports": [
+      "dev.langchain4j.mcp.client.integration.McpServerHelper"
+    ]
+  },
+  "langchain4j-anthropic/src/main/java/dev/langchain4j/model/anthropic/AnthropicServerToolResult.java": {
+    "package": "dev.langchain4j.model.anthropic",
+    "definitions": [
+      "AnthropicServerToolResult",
+      "Builder"
+    ],
+    "imports": [
+      "dev.langchain4j.Experimental"
+    ],
+    "used_classes": [
+      "Experimental"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-mcp/src/main/java/dev/langchain4j/mcp/client/McpResourceContents.java": {
+    "package": "dev.langchain4j.mcp.client",
+    "definitions": [
+      "McpResourceContents",
+      "Type"
+    ],
+    "imports": [],
+    "used_classes": [
+      "McpTextResourceContents",
+      "McpBlobResourceContents"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-local-ai/src/main/java/dev/langchain4j/model/localai/LocalAiChatModel.java": {
+    "package": "dev.langchain4j.model.localai",
+    "definitions": [
+      "LocalAiChatModel",
+      "LocalAiChatModelBuilder"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolSpecification",
+      "dev.langchain4j.data.message.AiMessage",
+      "dev.langchain4j.data.message.ChatMessage",
+      "dev.langchain4j.exception.UnsupportedFeatureException",
+      "dev.langchain4j.model.chat.ChatModel",
+      "dev.langchain4j.model.chat.request.ChatRequest",
+      "dev.langchain4j.model.chat.request.ChatRequestParameters",
+      "dev.langchain4j.internal.ChatRequestValidationUtils",
+      "dev.langchain4j.model.chat.request.ToolChoice",
+      "dev.langchain4j.model.chat.response.ChatResponse",
+      "dev.langchain4j.model.chat.response.ChatResponseMetadata",
+      "dev.langchain4j.model.localai.spi.LocalAiChatModelBuilderFactory",
+      "dev.langchain4j.model.openai.internal.OpenAiClient",
+      "dev.langchain4j.model.openai.internal.chat.ChatCompletionRequest",
+      "dev.langchain4j.model.openai.internal.chat.ChatCompletionResponse",
+      "dev.langchain4j.model.output.Response"
+    ],
+    "used_classes": [
+      "ToolSpecification",
+      "AiMessage",
+      "ChatMessage",
+      "UnsupportedFeatureException",
+      "ChatModel",
+      "ChatRequest",
+      "ChatRequestParameters",
+      "ChatRequestValidationUtils",
+      "ToolChoice",
+      "ChatResponse",
+      "ChatResponseMetadata",
+      "LocalAiChatModelBuilderFactory",
+      "OpenAiClient",
+      "ChatCompletionRequest",
+      "ChatCompletionResponse",
+      "Response",
+      "Logger"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.RetryUtils",
+      "dev.langchain4j.internal.Utils",
+      "dev.langchain4j.internal.ValidationUtils",
+      "dev.langchain4j.model.chat.request.ToolChoice",
+      "dev.langchain4j.model.openai.internal.OpenAiUtils",
+      "dev.langchain4j.spi.ServiceHelper"
+    ]
+  },
+  "langchain4j/src/test/java/dev/langchain4j/service/AiServicesModerationTest.java": {
+    "package": "dev.langchain4j.service",
+    "definitions": [
+      "AiServicesModerationTest"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolExecutionRequest",
+      "dev.langchain4j.data.message.AiMessage",
+      "dev.langchain4j.model.moderation.Moderation",
+      "dev.langchain4j.model.openai.internal.chat.AssistantMessage",
+      "dev.langchain4j.model.openai.internal.chat.ChatCompletionChoice",
+      "dev.langchain4j.model.openai.internal.chat.ChatCompletionResponse",
+      "dev.langchain4j.model.openai.internal.chat.FunctionCall"
+    ],
+    "used_classes": [
+      "Moderation",
+      "CompletableFuture",
+      "AiServices",
+      "ModerationException",
+      "ChatCompletionResponse",
+      "ChatCompletionChoice",
+      "AssistantMessage",
+      "AiMessage",
+      "FunctionCall",
+      "ToolExecutionRequest"
+    ],
+    "static_imports": [
+      "dev.langchain4j.model.openai.internal.OpenAiUtils"
+    ]
+  },
+  "langchain4j-core/src/test/java/dev/langchain4j/rag/DefaultRetrievalAugmentorTest.java": {
+    "package": "dev.langchain4j.rag",
+    "definitions": [
+      "DefaultRetrievalAugmentorTest",
+      "TestExecutor",
+      "TestQueryTransformer",
+      "TestQueryRouter",
+      "TestContentRetriever",
+      "TestContentAggregator",
+      "TestContentInjector"
+    ],
+    "imports": [
+      "dev.langchain4j.data.message.ChatMessage",
+      "dev.langchain4j.data.message.SystemMessage",
+      "dev.langchain4j.data.message.UserMessage",
+      "dev.langchain4j.rag.content.Content",
+      "dev.langchain4j.rag.content.aggregator.ContentAggregator",
+      "dev.langchain4j.rag.content.injector.ContentInjector",
+      "dev.langchain4j.rag.content.retriever.ContentRetriever",
+      "dev.langchain4j.rag.query.Metadata",
+      "dev.langchain4j.rag.query.Query",
+      "dev.langchain4j.rag.query.router.DefaultQueryRouter",
+      "dev.langchain4j.rag.query.router.QueryRouter",
+      "dev.langchain4j.rag.query.transformer.DefaultQueryTransformer",
+      "dev.langchain4j.rag.query.transformer.QueryTransformer"
+    ],
+    "used_classes": [
+      "DefaultRetrievalAugmentor",
+      "RetrievalAugmentor",
+      "AugmentationResult",
+      "AugmentationRequest",
+      "ChatMessage",
+      "SystemMessage",
+      "UserMessage",
+      "Content",
+      "ContentAggregator",
+      "ContentInjector",
+      "ContentRetriever",
+      "Metadata",
+      "Query",
+      "DefaultQueryRouter",
+      "QueryRouter",
+      "DefaultQueryTransformer",
+      "QueryTransformer"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-agentic-a2a/src/main/java/dev/langchain4j/agentic/a2a/DefaultA2AService.java": {
+    "package": "dev.langchain4j.agentic.a2a",
+    "definitions": [
+      "DefaultA2AService"
+    ],
+    "imports": [
+      "dev.langchain4j.agentic.Agent",
+      "dev.langchain4j.agentic.declarative.A2AClientAgent",
+      "dev.langchain4j.agentic.internal.A2AClientBuilder",
+      "dev.langchain4j.agentic.internal.A2AService",
+      "dev.langchain4j.agentic.internal.AgentExecutor",
+      "dev.langchain4j.agentic.internal.InternalAgent"
+    ],
+    "used_classes": [
+      "A2AService",
+      "A2AClientBuilder",
+      "DefaultA2AClientBuilder",
+      "AgentExecutor",
+      "InternalAgent",
+      "Method",
+      "A2AClientInstance",
+      "Agent",
+      "A2AClientAgentInvoker",
+      "A2AClientAgent"
+    ],
+    "static_imports": [
+      "dev.langchain4j.internal.Utils"
+    ]
+  },
+  "langchain4j-open-ai/src/main/java/dev/langchain4j/model/openai/OpenAiEmbeddingModelName.java": {
+    "package": "dev.langchain4j.model.openai",
+    "definitions": [
+      "OpenAiEmbeddingModelName"
+    ],
+    "imports": [],
+    "used_classes": [],
+    "static_imports": []
+  },
+  "langchain4j-vertex-ai-gemini/src/test/java/dev/langchain4j/model/vertexai/gemini/common/VertexAiGeminiStreamingChatModelIT.java": {
+    "package": "dev.langchain4j.model.vertexai.gemini.common",
+    "definitions": [
+      "VertexAiGeminiStreamingChatModelIT"
+    ],
+    "imports": [
+      "dev.langchain4j.model.chat.StreamingChatModel",
+      "dev.langchain4j.model.chat.common.AbstractStreamingChatModelIT",
+      "dev.langchain4j.model.chat.listener.ChatModelListener",
+      "dev.langchain4j.model.chat.response.StreamingChatResponseHandler",
+      "dev.langchain4j.model.vertexai.gemini.VertexAiGeminiStreamingChatModel"
+    ],
+    "used_classes": [
+      "StreamingChatModel",
+      "AbstractStreamingChatModelIT",
+      "ChatModelListener",
+      "StreamingChatResponseHandler",
+      "VertexAiGeminiStreamingChatModel",
+      "InOrder"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-azure-cosmos-nosql/src/test/java/dev/langchain4j/store/memory/azure/cosmos/nosql/AzureCosmosDBNoSqlMemoryStoreIT.java": {
+    "package": "dev.langchain4j.store.memory.azure.cosmos.nosql",
+    "definitions": [
+      "AzureCosmosDBNoSqlMemoryStoreIT"
+    ],
+    "imports": [],
+    "used_classes": [
+      "AzureCosmosDBNoSqlMemoryStoreTest",
+      "AzureCosmosDBNoSqlMemoryStore"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-mcp/src/test/java/dev/langchain4j/mcp/client/ToolSpecificationHelperTest.java": {
+    "package": "dev.langchain4j.mcp.client",
+    "definitions": [
+      "ToolSpecificationHelperTest"
+    ],
+    "imports": [
+      "dev.langchain4j.agent.tool.ToolSpecification",
+      "dev.langchain4j.model.chat.request.json.JsonAnyOfSchema",
+      "dev.langchain4j.model.chat.request.json.JsonArraySchema",
+      "dev.langchain4j.model.chat.request.json.JsonBooleanSchema",
+      "dev.langchain4j.model.chat.request.json.JsonEnumSchema",
+      "dev.langchain4j.model.chat.request.json.JsonIntegerSchema",
+      "dev.langchain4j.model.chat.request.json.JsonNullSchema",
+      "dev.langchain4j.model.chat.request.json.JsonNumberSchema",
+      "dev.langchain4j.model.chat.request.json.JsonObjectSchema",
+      "dev.langchain4j.model.chat.request.json.JsonSchemaElement",
+      "dev.langchain4j.model.chat.request.json.JsonStringSchema"
+    ],
+    "used_classes": [
+      "ToolSpecification",
+      "ToolSpecificationHelper",
+      "JsonAnyOfSchema",
+      "JsonArraySchema",
+      "JsonBooleanSchema",
+      "JsonEnumSchema",
+      "JsonIntegerSchema",
+      "JsonNullSchema",
+      "JsonNumberSchema",
+      "JsonObjectSchema",
+      "JsonSchemaElement",
+      "JsonStringSchema"
+    ],
+    "static_imports": [
+      "dev.langchain4j.mcp.client.McpToolMetadataKeys"
+    ]
+  },
+  "langchain4j-agentic/src/main/java/dev/langchain4j/agentic/scope/AgenticScopeStore.java": {
+    "package": "dev.langchain4j.agentic.scope",
+    "definitions": [
+      "AgenticScopeStore"
+    ],
+    "imports": [],
+    "used_classes": [
+      "AgenticScopeKey",
+      "DefaultAgenticScope"
+    ],
+    "static_imports": []
+  },
+  "langchain4j-watsonx/src/test/java/dev/langchain4j/model/watsonx/WatsonxEmbeddingModelTest.java": {
+    "package": "dev.langchain4j.model.watsonx",
+    "definitions": [
+      "WatsonxEmbeddingModelTest"
+    ],
+    "imports": [
+      "com.ibm.watsonx.ai.CloudRegion",
+      "com.ibm.watsonx.ai.core.Json",
+      "com.ibm.watsonx.ai.core.auth.ibmcloud.IBMCloudAuthenticator",
+      "com.ibm.watsonx.ai.core.provider.HttpClientProvider",
+      "com.ibm.watsonx.ai.embedding.EmbeddingParameters",
+      "com.ibm.watsonx.ai.embedding.EmbeddingRequest",
+      "com.ibm.watsonx.ai.embedding.EmbeddingResponse",
+      "com.ibm.watsonx.ai.embedding.EmbeddingService",
+      "dev.langchain4j.data.embedding.Embedding",
+      "dev.langchain4j.data.segment.TextSegment",
+      "dev.langchain4j.model.embedding.EmbeddingModel",
+      "dev.langchain4j.model.watsonx.utils.HttpUtils"
+    ],
+    "used_classes": [
+      "EmbeddingService",
+      "EmbeddingService.Builder",
+      "EmbeddingResponse.Result",
+      "IBMCloudAuthenticator",
+      "EmbeddingResponse",
+      "HttpClientProvider",
+      "WatsonxEmbeddingModel",
+      "CloudRegion",
+      "TextSegment",
+      "HttpUtils",
+      "EmbeddingRequest",
+      "EmbeddingModel",
+      "Embedding",
+      "EmbeddingParameters"
+    ],
+    "static_imports": []
+  }
+}
